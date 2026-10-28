@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# env files (.env.example is committed as a template)
+.env*
+!.env.example
+
+# build output
+.next/
+out/
+dist/
+.sanity/
+*.tsbuildinfo
+
+# deployment
+.vercel
+
+# logs
+npm-debug.log*
+*.log
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
