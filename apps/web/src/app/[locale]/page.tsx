@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { WhatsAppIcon } from "@/components/icons";
+import { Approach } from "@/components/sections/approach";
+import { CtaBanner } from "@/components/sections/cta-banner";
+import { FeatureTiles } from "@/components/sections/feature-tiles";
+import { HomeHero } from "@/components/sections/home-hero";
+import { ScrollMarquee } from "@/components/sections/scroll-marquee";
+import { ServiceTiles } from "@/components/sections/service-tiles";
+import { StatsBand } from "@/components/sections/stats-band";
+import { Timeline } from "@/components/sections/timeline";
+import { ButtonLink } from "@/components/ui/button-link";
+import { Section, SectionHeading } from "@/components/ui/section";
+import { siteConfig } from "@/config/site";
+import { getHomeContent, getPageContent } from "@/content/pages";
+import { getServices } from "@/content/services";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
+import { localePath } from "@/i18n/paths";
 import { getAlternates } from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -11,15 +25,95 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
+  const { hero, stats, services: servicesCopy, approach, why, process } = getHomeContent(locale);
+  const cta = getPageContent(locale, "cta");
+  const services = getServices(locale);
+  const contactHref = localePath(locale, "/contact");
+  const servicesHref = localePath(locale, "/services");
 
   return (
-    <main
-      id="main-content"
-      className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-4 px-4 py-24"
-    >
-      <LanguageSwitcher currentLocale={locale} label={dict.common.languageSwitcher} />
-      <h1 className="text-4xl font-semibold tracking-tight text-primary">{dict.home.title}</h1>
-      <p className="text-lg text-muted">{dict.home.underConstruction}</p>
-    </main>
+    <>
+      <HomeHero
+        eyebrow={hero.eyebrow}
+        title={hero.title}
+        description={hero.description}
+        panelTitle={hero.panelTitle}
+        panelNote={hero.panelNote}
+        highlights={hero.highlights}
+        primary={{ href: contactHref, label: hero.primaryCta }}
+        secondary={{ href: servicesHref, label: hero.secondaryCta }}
+        image={hero.image}
+      />
+
+      <StatsBand
+        eyebrow={stats.eyebrow}
+        title={stats.title}
+        description={stats.description}
+        items={stats.items}
+        note={stats.note}
+      />
+
+      <Section aria-labelledby="home-services">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            id="home-services"
+            eyebrow={servicesCopy.eyebrow}
+            title={servicesCopy.title}
+            description={servicesCopy.description}
+          />
+          <div className="shrink-0">
+            <ButtonLink href={servicesHref} variant="outline">
+              {servicesCopy.viewAll}
+            </ButtonLink>
+          </div>
+        </div>
+        <div className="mt-12">
+          <ServiceTiles locale={locale} services={services} />
+        </div>
+      </Section>
+
+      <ScrollMarquee words={services.map((service) => service.title)} />
+
+      <Approach
+        eyebrow={approach.eyebrow}
+        title={approach.title}
+        description={approach.description}
+        image={approach.image}
+        items={approach.items}
+      />
+
+      <FeatureTiles
+        id="home-why"
+        eyebrow={why.eyebrow}
+        title={why.title}
+        description={why.description}
+        items={why.items}
+      />
+
+      <Section aria-labelledby="home-process">
+        <SectionHeading
+          id="home-process"
+          eyebrow={process.eyebrow}
+          title={process.title}
+          description={process.description}
+          align="center"
+        />
+        <div className="mx-auto mt-14 max-w-5xl">
+          <Timeline items={process.items} stepLabel={dict.blocks.step} surface="page" />
+        </div>
+      </Section>
+
+      <CtaBanner
+        title={cta.title}
+        description={cta.description}
+        button={{ href: contactHref, label: cta.button }}
+        secondary={{
+          href: siteConfig.contact.whatsappUrl,
+          label: dict.contactPage.whatsapp,
+          icon: <WhatsAppIcon className="size-5" />,
+        }}
+        image={cta.image.key}
+      />
+    </>
   );
 }

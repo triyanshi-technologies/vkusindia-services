@@ -1,0 +1,758 @@
+[
+  {
+    "slug": "consultation",
+    "icon": "briefcase",
+    "image": {
+      "key": "consultation",
+      "alt": {
+        "en": "Consultants planning a strategy with sticky notes on a whiteboard",
+        "ru": "Консультанты планируют стратегию с помощью стикеров на доске"
+      }
+    },
+    "title": { "en": "Business Consultation", "ru": "Бизнес-консультирование" },
+    "summary": {
+      "en": "Strategy, legal, financial, HR, marketing and IT consulting to remove the roadblocks to growth.",
+      "ru": "Стратегический, юридический, финансовый, HR-, маркетинговый и IT-консалтинг для роста вашего бизнеса."
+    },
+    "tagline": {
+      "en": "Strategic guidance for every challenge. Trusted expertise for every industry.",
+      "ru": "Стратегические решения для любых задач. Проверенная экспертиза в любой отрасли."
+    },
+    "intro": [
+      {
+        "en": "Every business hits a wall at some point: stagnating growth, operational inefficiency, or simply not knowing which direction to take next. That is where we step in.",
+        "ru": "Рано или поздно любой бизнес упирается в стену: рост замедляется, процессы неэффективны или непонятно, куда двигаться дальше. Именно здесь мы приходим на помощь."
+      },
+      {
+        "en": "We don't just give advice. We become your strategic partner: we diagnose problems, design solutions and deliver measurable results, from navigating Russian regulations to scaling your agribusiness.",
+        "ru": "Мы не просто даём советы. Мы становимся вашим стратегическим партнёром: диагностируем проблемы, разрабатываем решения и добиваемся измеримых результатов — от работы с российским законодательством до масштабирования агробизнеса."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "comparison",
+        "title": { "en": "The problem vs. the solution", "ru": "Проблема и решение" },
+        "columns": [
+          { "en": "Common pain point", "ru": "Типичная проблема" },
+          { "en": "How our consulting helps", "ru": "Как помогает наш консалтинг" }
+        ],
+        "rows": [
+          {
+            "feature": { "en": "Unclear strategy", "ru": "Нет чёткой стратегии" },
+            "values": [
+              { "en": "You don't know where your company will be in 3 years.", "ru": "Вы не знаете, где будет компания через 3 года." },
+              { "en": "We define a clear mission, set achievable long-term goals and build a step-by-step roadmap.", "ru": "Формулируем миссию, ставим достижимые долгосрочные цели и строим пошаговую дорожную карту." }
+            ]
+          },
+          {
+            "feature": { "en": "Wasted budget", "ru": "Неэффективный бюджет" },
+            "values": [
+              { "en": "Costs are rising, but profits aren't.", "ru": "Расходы растут, а прибыль — нет." },
+              { "en": "We conduct deep financial audits, optimise expenses and unlock hidden capital.", "ru": "Проводим глубокий финансовый аудит, оптимизируем расходы и высвобождаем скрытые ресурсы." }
+            ]
+          },
+          {
+            "feature": { "en": "Inefficient teams", "ru": "Неэффективная команда" },
+            "values": [
+              { "en": "Employees are overworked, yet productivity is low.", "ru": "Сотрудники перегружены, а производительность низкая." },
+              { "en": "We restructure workflows, implement smart KPIs and build a motivated culture.", "ru": "Перестраиваем процессы, внедряем KPI и формируем мотивирующую корпоративную культуру." }
+            ]
+          },
+          {
+            "feature": { "en": "Legal uncertainty", "ru": "Правовая неопределённость" },
+            "values": [
+              { "en": "You are unsure about compliance or land ownership rules.", "ru": "Нет уверенности в соблюдении требований или правилах владения землёй." },
+              { "en": "We provide full legal support, from contracts to Russian land law.", "ru": "Обеспечиваем полное юридическое сопровождение — от договоров до земельного права РФ." }
+            ]
+          },
+          {
+            "feature": { "en": "Digital lag", "ru": "Цифровое отставание" },
+            "values": [
+              { "en": "You need new tech (AI, CRM, automation) but don't know where to start.", "ru": "Нужны новые технологии (ИИ, CRM, автоматизация), но непонятно, с чего начать." },
+              { "en": "We chart a digital transformation roadmap that fits your operations.", "ru": "Составляем план цифровой трансформации, встроенный в ваши процессы." }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "features",
+        "title": { "en": "Our consulting services", "ru": "Наши консалтинговые услуги" },
+        "intro": {
+          "en": "Whether you operate in agriculture, manufacturing or services, we have the expertise to move the needle.",
+          "ru": "Сельское хозяйство, производство или сфера услуг — у нас есть экспертиза, чтобы добиться результата."
+        },
+        "items": [
+          {
+            "icon": "shield",
+            "title": { "en": "Legal consulting", "ru": "Юридический консалтинг" },
+            "description": {
+              "en": "Corporate structuring, contract negotiations, due diligence, bankruptcy support and court representation.",
+              "ru": "Корпоративное структурирование, переговоры по договорам, due diligence, сопровождение банкротства и представительство в суде."
+            }
+          },
+          {
+            "icon": "chart",
+            "title": { "en": "Financial consulting", "ru": "Финансовый консалтинг" },
+            "description": {
+              "en": "Risk assessment, investment strategy, expense optimisation and full financial modelling.",
+              "ru": "Оценка рисков, инвестиционная стратегия, оптимизация расходов и финансовое моделирование."
+            }
+          },
+          {
+            "icon": "users",
+            "title": { "en": "HR consulting", "ru": "HR-консалтинг" },
+            "description": {
+              "en": "Talent acquisition, KPI development, training, retention strategies and corporate culture.",
+              "ru": "Подбор персонала, разработка KPI, обучение, удержание сотрудников и корпоративная культура."
+            }
+          },
+          {
+            "icon": "megaphone",
+            "title": { "en": "Marketing consulting", "ru": "Маркетинговый консалтинг" },
+            "description": {
+              "en": "Brand positioning, market analysis, promotion channel optimisation and audience targeting.",
+              "ru": "Позиционирование бренда, анализ рынка, оптимизация каналов продвижения и таргетинг."
+            }
+          },
+          {
+            "icon": "laptop",
+            "title": { "en": "IT consulting", "ru": "IT-консалтинг" },
+            "description": {
+              "en": "Process automation, data security, cloud migration and AI implementation.",
+              "ru": "Автоматизация процессов, защита данных, переход в облако и внедрение ИИ."
+            }
+          },
+          {
+            "icon": "target",
+            "title": { "en": "Strategic consulting", "ru": "Стратегический консалтинг" },
+            "description": {
+              "en": "Long-term mission, scaling strategies, business transformation and exit planning.",
+              "ru": "Долгосрочная миссия, стратегии масштабирования, трансформация бизнеса и планирование выхода."
+            }
+          }
+        ]
+      },
+      {
+        "type": "steps",
+        "title": { "en": "From discovery to delivery", "ru": "От диагностики до результата" },
+        "intro": {
+          "en": "No cookie-cutter solutions. Every engagement follows a structured, collaborative method.",
+          "ru": "Никаких шаблонных решений. Каждый проект строится по чёткой совместной методике."
+        },
+        "items": [
+          {
+            "title": { "en": "Discovery & diagnosis", "ru": "Диагностика" },
+            "description": {
+              "en": "We listen, ask the right questions and run a 360-degree audit of your current state.",
+              "ru": "Слушаем, задаём правильные вопросы и проводим комплексный аудит текущего состояния."
+            }
+          },
+          {
+            "title": { "en": "Tailored strategy", "ru": "Индивидуальная стратегия" },
+            "description": {
+              "en": "A custom roadmap with clear milestones, KPIs and financial projections.",
+              "ru": "Дорожная карта с чёткими этапами, KPI и финансовыми прогнозами."
+            }
+          },
+          {
+            "title": { "en": "Hands-on implementation", "ru": "Практическое внедрение" },
+            "description": {
+              "en": "We don't just hand you a report. We work alongside your team to execute the plan.",
+              "ru": "Мы не ограничиваемся отчётом, а работаем вместе с вашей командой над реализацией плана."
+            }
+          },
+          {
+            "title": { "en": "Review & refine", "ru": "Контроль и корректировка" },
+            "description": {
+              "en": "We monitor results and adjust the strategy to keep your return on investment high.",
+              "ru": "Отслеживаем результаты и корректируем стратегию для максимальной отдачи."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "open-a-business",
+    "icon": "building",
+    "image": {
+      "key": "open-a-business",
+      "alt": {
+        "en": "A business owner signing registration documents",
+        "ru": "Предприниматель подписывает регистрационные документы"
+      }
+    },
+    "title": { "en": "Open a Business", "ru": "Открытие бизнеса" },
+    "summary": {
+      "en": "Company registration, licensing, accounting, tax support and bank accounts for foreign investors.",
+      "ru": "Регистрация компании, лицензирование, бухгалтерия, налоговое сопровождение и открытие счетов для иностранных инвесторов."
+    },
+    "tagline": {
+      "en": "From startup to successful enterprise. We handle the paperwork, so you don't have to.",
+      "ru": "От стартапа до успешного предприятия. Документы — наша забота."
+    },
+    "intro": [
+      {
+        "en": "Starting or running a business in Russia means navigating bureaucracy, licences and ever-changing regulations. Missing a single document can cause costly delays.",
+        "ru": "Открытие и ведение бизнеса в России — это бюрократия, лицензии и постоянно меняющиеся правила. Один недостающий документ может обернуться дорогостоящими задержками."
+      },
+      {
+        "en": "We are your one-stop partner for registration, licensing and ongoing compliance. Whether you are a local entrepreneur or a foreign investor, we make the process swift, transparent and stress-free.",
+        "ru": "Мы — ваш единый партнёр по регистрации, лицензированию и соблюдению требований. Для местных предпринимателей и иностранных инвесторов мы делаем этот процесс быстрым, прозрачным и спокойным."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "features",
+        "title": { "en": "Core registration services", "ru": "Основные услуги по регистрации" },
+        "items": [
+          {
+            "icon": "clipboard-check",
+            "title": { "en": "Licensing & accreditation", "ru": "Лицензирование и аккредитация" },
+            "description": {
+              "en": "We secure the business licences and accreditations your industry requires.",
+              "ru": "Получаем лицензии и аккредитации, необходимые для вашей отрасли."
+            }
+          },
+          {
+            "icon": "file-text",
+            "title": { "en": "LLC and JSC registration", "ru": "Регистрация ООО и АО" },
+            "description": {
+              "en": "LLCs for small and medium businesses, joint stock companies for larger enterprises.",
+              "ru": "ООО для малого и среднего бизнеса, АО — для крупных предприятий."
+            }
+          },
+          {
+            "icon": "globe",
+            "title": { "en": "Foreign company registration", "ru": "Регистрация иностранной компании" },
+            "description": {
+              "en": "Specialised support for international investors entering the Russian market.",
+              "ru": "Специализированная поддержка иностранных инвесторов при выходе на российский рынок."
+            }
+          },
+          {
+            "icon": "building",
+            "title": { "en": "Industry-specific registrations", "ru": "Отраслевая регистрация" },
+            "description": {
+              "en": "Cafés and restaurants, manufacturing units, construction companies (SRO approvals) and more.",
+              "ru": "Кафе и рестораны, производства, строительные компании (допуски СРО) и другие."
+            }
+          },
+          {
+            "icon": "chart",
+            "title": { "en": "Accounting, audit & tax", "ru": "Бухгалтерия, аудит и налоги" },
+            "description": {
+              "en": "Full-cycle bookkeeping, payroll, audits and tax advice that keeps you compliant.",
+              "ru": "Полное бухгалтерское сопровождение, расчёт зарплаты, аудит и налоговые консультации."
+            }
+          },
+          {
+            "icon": "bank",
+            "title": { "en": "Banking & corporate changes", "ru": "Банки и корпоративные изменения" },
+            "description": {
+              "en": "Bank account opening, charter and USRLE amendments, and changes of LLC participants.",
+              "ru": "Открытие счетов, изменения в устав и ЕГРЮЛ, смена участников ООО."
+            }
+          },
+          {
+            "icon": "users",
+            "title": { "en": "HR services", "ru": "Кадровые услуги" },
+            "description": {
+              "en": "Employment contracts, personnel records, onboarding and Russian labour law compliance.",
+              "ru": "Трудовые договоры, кадровый учёт, адаптация сотрудников и соблюдение трудового права РФ."
+            }
+          },
+          {
+            "icon": "trending-up",
+            "title": { "en": "Reorganisation & closure", "ru": "Реорганизация и ликвидация" },
+            "description": {
+              "en": "Mergers, spin-offs and restructuring, or a legally compliant liquidation.",
+              "ru": "Слияния, выделения и реструктуризация или законная ликвидация компании."
+            }
+          }
+        ]
+      },
+      {
+        "type": "checklist",
+        "title": { "en": "Why choose us", "ru": "Почему выбирают нас" },
+        "items": [
+          { "en": "Full-service coverage, from registration to liquidation.", "ru": "Полный цикл услуг — от регистрации до ликвидации." },
+          { "en": "Speed and accuracy: we know which documents to submit and where.", "ru": "Скорость и точность: мы знаем, какие документы и куда подавать." },
+          { "en": "Legal safety: every document is checked to protect you from fines.", "ru": "Юридическая безопасность: каждый документ проверяется, чтобы избежать штрафов." },
+          { "en": "Bilingual support for Russian and international clients.", "ru": "Поддержка на русском и английском языках." }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "business-plan",
+    "icon": "chart",
+    "image": {
+      "key": "business-plan",
+      "alt": {
+        "en": "A laptop showing financial charts and revenue figures",
+        "ru": "Ноутбук с финансовыми графиками и показателями выручки"
+      }
+    },
+    "title": { "en": "Business Plan", "ru": "Бизнес-план" },
+    "summary": {
+      "en": "A professional business plan and financial model, ready for banks, partners and investors.",
+      "ru": "Профессиональный бизнес-план и финансовая модель для банков, партнёров и инвесторов."
+    },
+    "tagline": {
+      "en": "From idea to execution: a plan that banks and investors take seriously.",
+      "ru": "От идеи до реализации: план, к которому серьёзно отнесутся банки и инвесторы."
+    },
+    "intro": [
+      {
+        "en": "Whether you are starting an agribusiness, expanding into new regions or applying for government grants, a strong plan is your first step.",
+        "ru": "Запускаете агробизнес, выходите в новые регионы или претендуете на господдержку — сильный бизнес-план станет первым шагом."
+      },
+      {
+        "en": "You share the details. We handle the research and the number-crunching, and deliver a polished plan and financial model.",
+        "ru": "Вы предоставляете исходные данные, а мы берём на себя исследования и расчёты и готовим выверенный план и финансовую модель."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "steps",
+        "title": { "en": "How it works", "ru": "Как это работает" },
+        "items": [
+          {
+            "title": { "en": "Share your information", "ru": "Предоставьте информацию" },
+            "description": {
+              "en": "Your personal details, project basics (cost, timeline, jobs, revenue) and the story behind your business. Don't worry if you don't have all the numbers yet.",
+              "ru": "Ваши данные, основные параметры проекта (стоимость, сроки, рабочие места, выручка) и описание бизнеса. Если не все цифры готовы — поможем их уточнить."
+            }
+          },
+          {
+            "title": { "en": "We do the research", "ru": "Мы проводим исследование" },
+            "description": {
+              "en": "We analyse the market, refine your figures and build the financial model.",
+              "ru": "Анализируем рынок, уточняем показатели и строим финансовую модель."
+            }
+          },
+          {
+            "title": { "en": "Receive your plan", "ru": "Получите готовый план" },
+            "description": {
+              "en": "A professional business plan, ready to present to banks, partners or investors.",
+              "ru": "Профессиональный бизнес-план, готовый для презентации банкам, партнёрам или инвесторам."
+            }
+          }
+        ]
+      },
+      {
+        "type": "features",
+        "title": { "en": "What you will receive", "ru": "Что вы получите" },
+        "items": [
+          {
+            "icon": "clipboard-check",
+            "title": { "en": "Own resources table", "ru": "Таблица собственных ресурсов" },
+            "description": {
+              "en": "A clear breakdown of the land, buildings, machinery and equipment you already have.",
+              "ru": "Перечень имеющихся земли, зданий, техники и оборудования."
+            }
+          },
+          {
+            "icon": "users",
+            "title": { "en": "Workforce plan", "ru": "Кадровый план" },
+            "description": {
+              "en": "Detailed staff requirements and organisational structure.",
+              "ru": "Потребность в персонале и организационная структура."
+            }
+          },
+          {
+            "icon": "bank",
+            "title": { "en": "Investment plan", "ru": "Инвестиционный план" },
+            "description": {
+              "en": "A phased breakdown of your capital needs.",
+              "ru": "Поэтапная разбивка потребности в капитале."
+            }
+          },
+          {
+            "icon": "calendar",
+            "title": { "en": "Development roadmap", "ru": "План развития" },
+            "description": {
+              "en": "A step-by-step timeline for growth.",
+              "ru": "Пошаговый график развития проекта."
+            }
+          },
+          {
+            "icon": "trending-up",
+            "title": { "en": "Sales & revenue forecast", "ru": "Прогноз продаж и выручки" },
+            "description": {
+              "en": "Data-driven projections of your sales.",
+              "ru": "Прогнозы продаж на основе данных."
+            }
+          },
+          {
+            "icon": "file-text",
+            "title": { "en": "Financial tables & conclusions", "ru": "Финансовые таблицы и выводы" },
+            "description": {
+              "en": "Profit & loss, cash flow, balance sheet and an executive summary of economic viability.",
+              "ru": "Отчёт о прибылях и убытках, движение денежных средств, баланс и вывод об экономической эффективности."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "warehouse",
+    "icon": "package",
+    "image": {
+      "key": "warehouse",
+      "alt": {
+        "en": "Tall shelves stacked with boxes in a large warehouse",
+        "ru": "Высокие стеллажи с коробками на большом складе"
+      }
+    },
+    "title": { "en": "Warehouse & Fulfilment", "ru": "Склад и фулфилмент" },
+    "summary": {
+      "en": "Rent your own warehouse or work with a fulfilment operator. We help you pick the right option.",
+      "ru": "Аренда собственного склада или работа с фулфилмент-оператором: поможем выбрать оптимальный вариант."
+    },
+    "tagline": {
+      "en": "We are not real estate brokers. We are your logistics advisors.",
+      "ru": "Мы не риелторы. Мы — ваши консультанты по логистике."
+    },
+    "intro": [
+      {
+        "en": "If you need storage space in Russia, you have two very different options: rent a warehouse and run it yourself, or partner with an operator who does the heavy lifting.",
+        "ru": "Если вам нужны складские площади в России, есть два принципиально разных пути: арендовать склад и управлять им самостоятельно или работать с оператором, который возьмёт всё на себя."
+      },
+      {
+        "en": "The right choice depends on your business model, volume and long-term goals. We analyse your needs and connect you with reliable, cost-effective operators.",
+        "ru": "Правильный выбор зависит от бизнес-модели, объёмов и долгосрочных целей. Мы анализируем ваши задачи и подбираем надёжных и выгодных операторов."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "comparison",
+        "title": { "en": "Quick comparison", "ru": "Краткое сравнение" },
+        "columns": [
+          { "en": "Rent your own warehouse", "ru": "Собственный склад в аренду" },
+          { "en": "Use a fulfilment operator", "ru": "Фулфилмент-оператор" }
+        ],
+        "rows": [
+          {
+            "feature": { "en": "Staff & HR", "ru": "Персонал" },
+            "values": [
+              { "en": "You recruit, train and manage the team.", "ru": "Вы сами нанимаете, обучаете и управляете командой." },
+              { "en": "Operator provides trained staff.", "ru": "Оператор предоставляет обученный персонал." }
+            ]
+          },
+          {
+            "feature": { "en": "Equipment", "ru": "Оборудование" },
+            "values": [
+              { "en": "You buy and maintain forklifts, racks and software.", "ru": "Вы покупаете и обслуживаете погрузчики, стеллажи и ПО." },
+              { "en": "Operator provides all equipment.", "ru": "Оператор предоставляет всё оборудование." }
+            ]
+          },
+          {
+            "feature": { "en": "Flexibility", "ru": "Гибкость" },
+            "values": [
+              { "en": "Low: long-term leases with fixed capacity.", "ru": "Низкая: долгосрочная аренда с фиксированной площадью." },
+              { "en": "High: pay only for what you use.", "ru": "Высокая: оплата только за фактический объём." }
+            ]
+          },
+          {
+            "feature": { "en": "E-commerce support", "ru": "Поддержка e-commerce" },
+            "values": [
+              { "en": "You build integrations yourself.", "ru": "Интеграции вы выстраиваете сами." },
+              { "en": "Often built in (labelling, Ozon and Wildberries).", "ru": "Обычно уже есть (маркировка, Ozon и Wildberries)." }
+            ]
+          },
+          {
+            "feature": { "en": "Speed to start", "ru": "Скорость запуска" },
+            "values": [
+              { "en": "Slow: weeks or months.", "ru": "Медленно: недели или месяцы." },
+              { "en": "Fast: often ready in days.", "ru": "Быстро: часто за несколько дней." }
+            ]
+          },
+          {
+            "feature": { "en": "Cost structure", "ru": "Структура затрат" },
+            "values": [
+              { "en": "Fixed: rent, salaries, equipment.", "ru": "Постоянные: аренда, зарплаты, оборудование." },
+              { "en": "Variable: per pallet or per order.", "ru": "Переменные: за паллету или за заказ." }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "features",
+        "title": { "en": "How we help you", "ru": "Как мы помогаем" },
+        "intro": {
+          "en": "Whether you need a storage partner for 10,000 pallets or fulfilment for 100 daily orders, we find the right match.",
+          "ru": "Нужен ли вам партнёр для хранения 10 000 паллет или фулфилмент на 100 заказов в день — мы найдём подходящий вариант."
+        },
+        "items": [
+          {
+            "icon": "search",
+            "title": { "en": "Assess your needs", "ru": "Оцениваем потребности" },
+            "description": {
+              "en": "Product type, volume and seasonality.",
+              "ru": "Тип продукции, объёмы и сезонность."
+            }
+          },
+          {
+            "icon": "clipboard-check",
+            "title": { "en": "Shortlist operators", "ru": "Подбираем операторов" },
+            "description": {
+              "en": "The best operators for your requirements.",
+              "ru": "Лучшие операторы под ваши требования."
+            }
+          },
+          {
+            "icon": "chart",
+            "title": { "en": "Compare terms", "ru": "Сравниваем условия" },
+            "description": {
+              "en": "Pricing, services and contract terms, on your behalf.",
+              "ru": "Цены, услуги и условия договоров — от вашего имени."
+            }
+          },
+          {
+            "icon": "message",
+            "title": { "en": "Negotiate for you", "ru": "Ведём переговоры" },
+            "description": {
+              "en": "Introductions and favourable conditions.",
+              "ru": "Знакомим с операторами и добиваемся выгодных условий."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "exhibitions",
+    "icon": "calendar",
+    "image": {
+      "key": "exhibitions",
+      "alt": {
+        "en": "A speaker presenting on a large screen to a full exhibition hall",
+        "ru": "Докладчик выступает перед полным залом на выставке"
+      }
+    },
+    "title": { "en": "Exhibition Participation", "ru": "Участие в выставках" },
+    "summary": {
+      "en": "Turnkey exhibition service: space booking, stand construction, logistics, hotels and interpreters.",
+      "ru": "Выставки под ключ: бронирование площади, застройка стенда, логистика, гостиницы и переводчики."
+    },
+    "tagline": {
+      "en": "Choose the full turnkey package, or pick only the services you need.",
+      "ru": "Выберите полный пакет под ключ или только нужные услуги."
+    },
+    "intro": [
+      {
+        "en": "We are flexible and tailor our support to your goals. Choose the full package for a completely hands-off experience, or select individual services.",
+        "ru": "Мы гибко подстраиваемся под ваши цели. Выберите полный пакет и ни о чём не беспокойтесь — или отдельные услуги."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "features",
+        "title": { "en": "Everything we handle for you", "ru": "Всё, что мы берём на себя" },
+        "items": [
+          {
+            "icon": "target",
+            "title": { "en": "Exhibition selection", "ru": "Выбор выставки" },
+            "description": {
+              "en": "We recommend the most relevant and profitable exhibitions for your industry.",
+              "ru": "Подбираем самые подходящие и выгодные выставки для вашей отрасли."
+            }
+          },
+          {
+            "icon": "calendar",
+            "title": { "en": "Space booking", "ru": "Бронирование площади" },
+            "description": {
+              "en": "The best exhibition space at the best available rates.",
+              "ru": "Оптимальная выставочная площадь по лучшей цене."
+            }
+          },
+          {
+            "icon": "file-text",
+            "title": { "en": "Documentation", "ru": "Документы" },
+            "description": {
+              "en": "Visas, customs and registration forms, prepared and submitted.",
+              "ru": "Визы, таможня и регистрационные формы — подготовим и подадим."
+            }
+          },
+          {
+            "icon": "building",
+            "title": { "en": "Stand design & construction", "ru": "Дизайн и застройка стенда" },
+            "description": {
+              "en": "A custom, eye-catching stand that reflects your brand.",
+              "ru": "Индивидуальный яркий стенд в стиле вашего бренда."
+            }
+          },
+          {
+            "icon": "truck",
+            "title": { "en": "Logistics & freight", "ru": "Логистика и доставка" },
+            "description": {
+              "en": "Shipping, customs clearance and delivery of all exhibition materials.",
+              "ru": "Доставка, таможенное оформление и транспортировка выставочных материалов."
+            }
+          },
+          {
+            "icon": "users",
+            "title": { "en": "Personnel", "ru": "Персонал" },
+            "description": {
+              "en": "Stand attendants, promoters, translators and technical staff.",
+              "ru": "Стендисты, промоутеры, переводчики и технический персонал."
+            }
+          },
+          {
+            "icon": "building",
+            "title": { "en": "Hotel accommodation", "ru": "Проживание" },
+            "description": {
+              "en": "Trusted hotels matched to your dates, location and budget.",
+              "ru": "Проверенные гостиницы под ваши даты, место и бюджет."
+            }
+          },
+          {
+            "icon": "globe",
+            "title": { "en": "Professional interpreters", "ru": "Профессиональные переводчики" },
+            "description": {
+              "en": "Interpreters who know your industry, in almost any language and country.",
+              "ru": "Переводчики со знанием вашей отрасли — практически в любой стране и на любом языке."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "shipment-control",
+    "icon": "truck",
+    "image": {
+      "key": "shipment-control",
+      "alt": {
+        "en": "A container ship being loaded by cranes at a cargo port",
+        "ru": "Погрузка контейнеровоза кранами в грузовом порту"
+      }
+    },
+    "title": { "en": "Export & Import Control", "ru": "Контроль экспорта и импорта" },
+    "summary": {
+      "en": "Seven-step shipment control from the supplier's warehouse to your door: documents, packaging and customs.",
+      "ru": "Контроль поставки в семь этапов — от склада поставщика до вашего: документы, упаковка и таможня."
+    },
+    "tagline": {
+      "en": "From the supplier's warehouse to your doorstep. We watch over every move.",
+      "ru": "От склада поставщика до вашей двери. Мы контролируем каждый шаг."
+    },
+    "intro": [
+      {
+        "en": "International shipping is full of moving parts: customs, paperwork, packaging and tight deadlines. One small mistake can lead to weeks of delays, fines or damaged goods.",
+        "ru": "Международная доставка — это таможня, документы, упаковка и жёсткие сроки. Одна небольшая ошибка может обернуться неделями задержек, штрафами или повреждённым грузом."
+      },
+      {
+        "en": "Shipment control is our complete oversight service. We make sure your supplier delivers the correct goods, on time, with perfect paperwork and in pristine condition.",
+        "ru": "Контроль поставки — это наше комплексное сопровождение. Мы следим, чтобы поставщик отгрузил нужный товар вовремя, с правильными документами и в идеальном состоянии."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "checklist",
+        "title": { "en": "Who needs this service?", "ru": "Кому нужна эта услуга?" },
+        "items": [
+          { "en": "You don't have an in-house foreign trade or logistics department.", "ru": "У вас нет собственного отдела ВЭД или логистики." },
+          { "en": "You have faced delays, wrong items or transit damage before.", "ru": "Вы уже сталкивались с задержками, пересортом или повреждениями в пути." },
+          { "en": "You want clear, real-time updates and full visibility over your cargo.", "ru": "Вам нужны оперативные обновления и полный контроль над грузом." }
+        ]
+      },
+      {
+        "type": "steps",
+        "title": { "en": "Our 7-step shipment control process", "ru": "Контроль поставки в 7 этапов" },
+        "items": [
+          {
+            "title": { "en": "Contract audit", "ru": "Аудит договора" },
+            "description": {
+              "en": "We check every clause, especially Incoterms, insurance and payment terms.",
+              "ru": "Проверяем каждый пункт, особенно Incoterms, страхование и условия оплаты."
+            }
+          },
+          {
+            "title": { "en": "Shipment date coordination", "ru": "Согласование даты отгрузки" },
+            "description": {
+              "en": "We confirm readiness with the supplier and arrange sea, air, road or rail transport.",
+              "ru": "Подтверждаем готовность у поставщика и организуем морской, авиа-, авто- или ж/д транспорт."
+            }
+          },
+          {
+            "title": { "en": "Packaging & labelling", "ru": "Упаковка и маркировка" },
+            "description": {
+              "en": "Sturdy packaging, hazardous goods rules and labels that match the documents.",
+              "ru": "Надёжная упаковка, правила для опасных грузов и маркировка в соответствии с документами."
+            }
+          },
+          {
+            "title": { "en": "Document verification", "ru": "Проверка документов" },
+            "description": {
+              "en": "Invoice, packing list, certificates, export declaration and bill of lading or CMR.",
+              "ru": "Инвойс, упаковочный лист, сертификаты, экспортная декларация и коносамент или CMR."
+            }
+          },
+          {
+            "title": { "en": "Cargo handover", "ru": "Передача груза перевозчику" },
+            "description": {
+              "en": "We supervise loading and document everything with photos and video.",
+              "ru": "Контролируем погрузку и фиксируем всё на фото и видео."
+            }
+          },
+          {
+            "title": { "en": "Real-time tracking", "ru": "Отслеживание в пути" },
+            "description": {
+              "en": "We track your shipment around the clock and keep you updated.",
+              "ru": "Отслеживаем груз круглосуточно и держим вас в курсе."
+            }
+          },
+          {
+            "title": { "en": "Arrival & customs clearance", "ru": "Приёмка и растаможка" },
+            "description": {
+              "en": "A smooth handover at your warehouse and help with customs when importing into Russia.",
+              "ru": "Приёмка на вашем складе и помощь с таможенным оформлением при импорте в Россию."
+            }
+          }
+        ]
+      },
+      {
+        "type": "features",
+        "title": { "en": "The benefits of working with us", "ru": "Преимущества работы с нами" },
+        "items": [
+          {
+            "icon": "message",
+            "title": { "en": "Single window", "ru": "Единое окно" },
+            "description": {
+              "en": "One point of contact instead of chasing forwarders, brokers and suppliers.",
+              "ru": "Один контакт вместо поиска экспедиторов, брокеров и поставщиков."
+            }
+          },
+          {
+            "icon": "globe",
+            "title": { "en": "Cross-border expertise", "ru": "Международная экспертиза" },
+            "description": {
+              "en": "Customs rules, certification and insurance in different countries.",
+              "ru": "Таможенные правила, сертификация и страхование в разных странах."
+            }
+          },
+          {
+            "icon": "shield",
+            "title": { "en": "Conflict prevention", "ru": "Предотвращение споров" },
+            "description": {
+              "en": "Documentation and evidence that protect your interests in disputes.",
+              "ru": "Документы и доказательства, защищающие ваши интересы в спорах."
+            }
+          },
+          {
+            "icon": "clock",
+            "title": { "en": "Shorter lead times", "ru": "Сокращение сроков" },
+            "description": {
+              "en": "Fewer delays from incomplete paperwork, wrong packaging or miscommunication.",
+              "ru": "Меньше задержек из-за документов, упаковки или недопонимания."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

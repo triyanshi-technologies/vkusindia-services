@@ -1,0 +1,303 @@
+{
+  "hero": {
+    "eyebrow": {
+      "en": "Business consulting in Russia",
+      "ru": "Бизнес-консалтинг в России"
+    },
+    "title": {
+      "en": "Your partner for entering the Russian market",
+      "ru": "Ваш партнёр для выхода на российский рынок"
+    },
+    "description": {
+      "en": "From company registration to warehousing, exhibitions and shipment control, we handle the details on the ground so you can focus on growth.",
+      "ru": "От регистрации компании до складов, выставок и контроля поставок — мы берём на себя все детали на месте, чтобы вы могли сосредоточиться на росте."
+    },
+    "primaryCta": {
+      "en": "Get a free consultation",
+      "ru": "Бесплатная консультация"
+    },
+    "secondaryCta": {
+      "en": "Explore services",
+      "ru": "Наши услуги"
+    },
+    "panelTitle": {
+      "en": "One partner on the ground",
+      "ru": "Один партнёр на месте"
+    },
+    "highlights": [
+      {
+        "en": "Company registration & licensing",
+        "ru": "Регистрация и лицензирование"
+      },
+      {
+        "en": "Warehousing & logistics",
+        "ru": "Склады и логистика"
+      },
+      {
+        "en": "Export & import control",
+        "ru": "Контроль экспорта и импорта"
+      }
+    ],
+    "image": {
+      "key": "hero",
+      "alt": {
+        "en": "The Moscow Kremlin and St Basil's Cathedral in winter",
+        "ru": "Московский Кремль и храм Василия Блаженного зимой"
+      }
+    },
+    "panelNote": {
+      "en": "First consultation is free",
+      "ru": "Первая консультация бесплатно"
+    }
+  },
+  "stats": {
+    "eyebrow": {
+      "en": "Russia in numbers",
+      "ru": "Россия в цифрах"
+    },
+    "title": {
+      "en": "A market with room to grow",
+      "ru": "Рынок с потенциалом роста"
+    },
+    "description": {
+      "en": "Strong domestic demand and new trade routes are opening opportunities for international suppliers and investors.",
+      "ru": "Высокий внутренний спрос и новые торговые маршруты открывают возможности для иностранных поставщиков и инвесторов."
+    },
+    "items": [
+      {
+        "value": {
+          "en": "$30.8B",
+          "ru": "$30,8 млрд"
+        },
+        "label": {
+          "en": "Russian imports in June 2026",
+          "ru": "Импорт России в июне 2026 года"
+        }
+      },
+      {
+        "value": {
+          "en": "+26%",
+          "ru": "+26%"
+        },
+        "label": {
+          "en": "Year-on-year import growth",
+          "ru": "Рост импорта за год"
+        }
+      },
+      {
+        "value": {
+          "en": "45%",
+          "ru": "45%"
+        },
+        "label": {
+          "en": "Of imports are machinery, equipment and vehicles",
+          "ru": "Импорта приходится на машины, оборудование и транспорт"
+        }
+      },
+      {
+        "value": {
+          "en": "153.8M t",
+          "ru": "153,8 млн т"
+        },
+        "label": {
+          "en": "Of grain harvested annually",
+          "ru": "Зерна собирается ежегодно"
+        }
+      }
+    ],
+    "note": {
+      "en": "Figures from our 2026 Russian market reviews.",
+      "ru": "Данные из наших обзоров российского рынка за 2026 год."
+    }
+  },
+  "services": {
+    "eyebrow": {
+      "en": "Services",
+      "ru": "Услуги"
+    },
+    "title": {
+      "en": "What we do",
+      "ru": "Чем мы занимаемся"
+    },
+    "description": {
+      "en": "Practical, on-the-ground support across the entire business lifecycle. Pick one service or combine several.",
+      "ru": "Практическая поддержка на месте на всех этапах развития бизнеса. Выберите одну услугу или комбинацию."
+    },
+    "viewAll": {
+      "en": "View all services",
+      "ru": "Все услуги"
+    }
+  },
+  "approach": {
+    "eyebrow": {
+      "en": "Our approach",
+      "ru": "Наш подход"
+    },
+    "title": {
+      "en": "One partner, from A to Z",
+      "ru": "Один партнёр — от А до Я"
+    },
+    "description": {
+      "en": "The Russian market is a land of immense opportunity, and of complex regulation, cultural nuance and logistical hurdles. We guide you through the entire business lifecycle, through action rather than presentations.",
+      "ru": "Российский рынок открывает огромные возможности, но в нём сложное регулирование, культурные особенности и логистические барьеры. Мы сопровождаем вас на всём жизненном цикле бизнеса — делом, а не презентациями."
+    },
+    "image": {
+      "key": "handshake",
+      "alt": {
+        "en": "Two business partners shaking hands",
+        "ru": "Два деловых партнёра пожимают руки"
+      }
+    },
+    "items": [
+      {
+        "letter": "A",
+        "title": {
+          "en": "Strategy & entry",
+          "ru": "Стратегия и выход на рынок"
+        },
+        "description": {
+          "en": "Market analysis, legal structuring and partner due diligence.",
+          "ru": "Анализ рынка, юридическое структурирование и проверка партнёров."
+        }
+      },
+      {
+        "letter": "M",
+        "title": {
+          "en": "Operations",
+          "ru": "Операционная деятельность"
+        },
+        "description": {
+          "en": "Tax optimisation, customs compliance and local HR management.",
+          "ru": "Налоговая оптимизация, таможенное соответствие и управление персоналом."
+        }
+      },
+      {
+        "letter": "Z",
+        "title": {
+          "en": "Growth & exit",
+          "ru": "Рост и выход из бизнеса"
+        },
+        "description": {
+          "en": "Supply chain scaling, risk management and profitable repatriation.",
+          "ru": "Масштабирование цепочек поставок, управление рисками и репатриация прибыли."
+        }
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": {
+      "en": "How we work",
+      "ru": "Как мы работаем"
+    },
+    "title": {
+      "en": "From first call to results",
+      "ru": "От первого звонка до результата"
+    },
+    "description": {
+      "en": "A clear, collaborative process. On-site at your office or online, wherever you are.",
+      "ru": "Понятный совместный процесс — в вашем офисе или онлайн, где бы вы ни находились."
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Free consultation",
+          "ru": "Бесплатная консультация"
+        },
+        "description": {
+          "en": "Tell us about your business and goals. We listen and ask the right questions.",
+          "ru": "Расскажите о вашем бизнесе и целях. Мы выслушаем и зададим правильные вопросы."
+        }
+      },
+      {
+        "title": {
+          "en": "Tailored plan",
+          "ru": "Индивидуальный план"
+        },
+        "description": {
+          "en": "We outline the exact steps, timeline and documents your project needs.",
+          "ru": "Определяем точные шаги, сроки и документы для вашего проекта."
+        }
+      },
+      {
+        "title": {
+          "en": "Hands-on execution",
+          "ru": "Реализация"
+        },
+        "description": {
+          "en": "We handle registration, logistics and paperwork alongside your team.",
+          "ru": "Берём на себя регистрацию, логистику и документы вместе с вашей командой."
+        }
+      },
+      {
+        "title": {
+          "en": "Ongoing support",
+          "ru": "Постоянная поддержка"
+        },
+        "description": {
+          "en": "We stay with you as you grow, adjusting the plan as markets change.",
+          "ru": "Остаёмся рядом по мере роста и корректируем план при изменении рынка."
+        }
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": {
+      "en": "Why vkusindia",
+      "ru": "Почему vkusindia"
+    },
+    "title": {
+      "en": "Operators, not theorists",
+      "ru": "Практики, а не теоретики"
+    },
+    "description": {
+      "en": "We combine the analytical rigour of Western consulting with the practical, on-the-ground agility of a local Russian enterprise.",
+      "ru": "Мы сочетаем аналитическую глубину западного консалтинга с практической гибкостью российской компании, работающей на месте."
+    },
+    "items": [
+      {
+        "icon": "briefcase",
+        "title": {
+          "en": "Entrepreneur-led",
+          "ru": "Предпринимательский подход"
+        },
+        "description": {
+          "en": "Founded by an entrepreneur who has launched and run businesses in Russia.",
+          "ru": "Компанию основал предприниматель, который сам запускал и вёл бизнес в России."
+        }
+      },
+      {
+        "icon": "shield",
+        "title": {
+          "en": "Transparent & honest",
+          "ru": "Прозрачность и честность"
+        },
+        "description": {
+          "en": "We tell you what you need to hear, not just what you want to hear.",
+          "ru": "Мы говорим то, что вам нужно услышать, а не только то, что хочется."
+        }
+      },
+      {
+        "icon": "globe",
+        "title": {
+          "en": "Bilingual team",
+          "ru": "Двуязычная команда"
+        },
+        "description": {
+          "en": "Support in English and Russian for international and local clients.",
+          "ru": "Поддержка на английском и русском для иностранных и российских клиентов."
+        }
+      },
+      {
+        "icon": "trending-up",
+        "title": {
+          "en": "Long-term partnership",
+          "ru": "Долгосрочное партнёрство"
+        },
+        "description": {
+          "en": "We measure our success by your sustained growth, not a single project fee.",
+          "ru": "Мы измеряем свой успех вашим устойчивым ростом, а не оплатой одного проекта."
+        }
+      }
+    ]
+  }
+}

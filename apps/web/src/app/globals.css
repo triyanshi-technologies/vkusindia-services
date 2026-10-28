@@ -31,6 +31,8 @@
 @layer base {
   html {
     color-scheme: light;
+    /* Keeps anchor targets clear of the sticky header (h-16). */
+    scroll-padding-top: 5rem;
   }
 
   body {
@@ -50,6 +52,184 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+}
+
+/*
+ * Motion. Scroll effects use CSS scroll-driven animations: no JavaScript, and
+ * they only move while the visitor scrolls. Everything is opt-in behind
+ * `prefers-reduced-motion: no-preference`, and browsers without
+ * `animation-timeline` simply show the final, static state.
+ */
+@layer components {
+  /* Decorative outlined text (always aria-hidden). */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-secondary);
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(rgb(255 255 255 / 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* Scroll progress bar: hidden unless it can follow the scroll. */
+  .scroll-progress {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1.18);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(18%);
+  }
+}
+
+@keyframes grow-x {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes grow-y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slide-start {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes slide-end {
+  from {
+    transform: translateX(-25%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes elevate {
+  to {
+    box-shadow: 0 10px 30px -14px rgb(17 45 78 / 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* One-time entrance for above-the-fold content. Use `--delay` to stagger. */
+  .animate-enter {
+    animation: reveal-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  @supports (animation-timeline: view()) {
+    /* Reveal as the element scrolls into view. `--i` staggers siblings in a row. */
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-fade {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry calc(var(--i, 0) * 6%) entry calc(45% + var(--i, 0) * 6%);
+    }
+    .reveal-left {
+      animation-name: reveal-left;
+    }
+    .reveal-right {
+      animation-name: reveal-right;
+    }
+    .reveal-fade {
+      animation-name: reveal-fade;
+    }
+
+    /* Background photo drifts slower than the page. */
+    .parallax {
+      animation: parallax linear both;
+      animation-timeline: view();
+      animation-range: exit;
+    }
+
+    /* Photo settles from zoomed in while the section crosses the screen. */
+    .scroll-zoom {
+      animation: zoom-out linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 60%;
+    }
+
+    /* Timeline line that draws itself as the list scrolls past. */
+    .draw-y {
+      transform-origin: top;
+      animation: grow-y linear both;
+      animation-timeline: view();
+      animation-range: entry 40% cover 75%;
+    }
+
+    /* Rows of large text that slide sideways with the scroll. */
+    .slide-start,
+    .slide-end {
+      animation: slide-start linear both;
+      animation-timeline: view();
+    }
+    .slide-end {
+      animation-name: slide-end;
+    }
+
+    .scroll-progress {
+      animation: grow-x linear both;
+      animation-timeline: scroll(root);
+    }
+
+    .header-elevate {
+      animation: elevate linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 160px;
     }
   }
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { locale as localeParam } from "next/root-params";
+import { Container } from "@/components/ui/container";
 import { defaultLocale, isLocale } from "@/i18n/config";
 import { loadDictionary } from "@/i18n/get-dictionary";
 
@@ -10,10 +11,7 @@ export default async function NotFound() {
   const dict = await loadDictionary(locale);
 
   return (
-    <main
-      id="main-content"
-      className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-4 px-4 py-24"
-    >
+    <Container className="flex max-w-3xl flex-1 flex-col justify-center gap-4 py-24">
       <h1 className="text-4xl font-semibold tracking-tight text-primary">{dict.notFound.title}</h1>
       <p className="text-lg text-muted">{dict.notFound.description}</p>
       <Link
@@ -22,6 +20,6 @@ export default async function NotFound() {
       >
         {dict.notFound.backHome}
       </Link>
-    </main>
+    </Container>
   );
 }
