@@ -90,7 +90,8 @@ export type HomeContent = {
     title: Localized;
     description: Localized;
     image: ImageRef;
-    items: { letter: string; title: Localized; description: Localized }[];
+    /** Stage letter: A/M/Z in English, А/М/Я in Russian ("от А до Я"). */
+    items: { letter: Localized; title: Localized; description: Localized }[];
   };
   process: {
     eyebrow: Localized;

@@ -47,7 +47,7 @@
     },
     "panelNote": {
       "en": "First consultation is free",
-      "ru": "Первая консультация бесплатно"
+      "ru": "Первая консультация бесплатна"
     }
   },
   "stats": {
@@ -87,7 +87,7 @@
         },
         "label": {
           "en": "Of imports are machinery, equipment and vehicles",
-          "ru": "Импорта — машины, оборудование и транспорт"
+          "ru": "Доля машин, оборудования и транспорта в импорте"
         }
       },
       {
@@ -97,7 +97,7 @@
         },
         "label": {
           "en": "Of grain harvested annually",
-          "ru": "Зерна собирается ежегодно"
+          "ru": "Ежегодный урожай зерна"
         }
       }
     ],
@@ -117,7 +117,7 @@
     },
     "description": {
       "en": "Practical, on-the-ground support across the entire business lifecycle. Pick one service or combine several.",
-      "ru": "Практическая поддержка на месте на всех этапах развития бизнеса. Выберите одну услугу или комбинацию."
+      "ru": "Практическая поддержка на месте на всех этапах развития бизнеса. Выберите одну услугу или сочетайте несколько."
     }
   },
   "approach": {
@@ -131,7 +131,7 @@
     },
     "description": {
       "en": "The Russian market is a land of immense opportunity, and of complex regulation, cultural nuance and logistical hurdles. We guide you through the entire business lifecycle, through action rather than presentations.",
-      "ru": "Российский рынок открывает огромные возможности, но в нём сложное регулирование, культурные особенности и логистические барьеры. Мы сопровождаем вас на всём жизненном цикле бизнеса — делом, а не презентациями."
+      "ru": "Российский рынок открывает огромные возможности, но в нём сложное регулирование, культурные особенности и логистические барьеры. Мы сопровождаем вас на протяжении всего жизненного цикла бизнеса — делом, а не презентациями."
     },
     "image": {
       "key": "handshake",
@@ -142,7 +142,10 @@
     },
     "items": [
       {
-        "letter": "A",
+        "letter": {
+          "en": "A",
+          "ru": "А"
+        },
         "title": {
           "en": "Strategy & entry",
           "ru": "Стратегия и выход на рынок"
@@ -153,18 +156,24 @@
         }
       },
       {
-        "letter": "M",
+        "letter": {
+          "en": "M",
+          "ru": "М"
+        },
         "title": {
           "en": "Operations",
           "ru": "Операционная деятельность"
         },
         "description": {
           "en": "Tax optimisation, customs compliance and local HR management.",
-          "ru": "Налоговая оптимизация, таможенное соответствие и управление персоналом."
+          "ru": "Налоговая оптимизация, соблюдение таможенных требований и управление местным персоналом."
         }
       },
       {
-        "letter": "Z",
+        "letter": {
+          "en": "Z",
+          "ru": "Я"
+        },
         "title": {
           "en": "Growth & exit",
           "ru": "Рост и выход из бизнеса"
@@ -217,7 +226,7 @@
         },
         "description": {
           "en": "We handle registration, logistics and paperwork alongside your team.",
-          "ru": "Берём на себя регистрацию, логистику и документы вместе с вашей командой."
+          "ru": "Занимаемся регистрацией, логистикой и документами вместе с вашей командой."
         }
       },
       {
@@ -265,7 +274,7 @@
         },
         "description": {
           "en": "We tell you what you need to hear, not just what you want to hear.",
-          "ru": "Мы говорим то, что вам нужно услышать, а не только то, что хочется."
+          "ru": "Мы говорим то, что вам нужно услышать, а не только то, что хочется услышать."
         }
       },
       {
@@ -287,7 +296,7 @@
         },
         "description": {
           "en": "We measure our success by your sustained growth, not a single project fee.",
-          "ru": "Мы измеряем свой успех вашим устойчивым ростом, а не оплатой одного проекта."
+          "ru": "Наш успех — это ваш устойчивый рост, а не гонорар за один проект."
         }
       }
     ]

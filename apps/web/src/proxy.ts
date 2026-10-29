@@ -23,10 +23,21 @@ export function proxy(request: NextRequest) {
     return redirectTo(request, ["", preferredLocale, ...rest].join("/"));
   }
 
-  const country = request.headers.get("x-vercel-ip-country")?.toUpperCase();
+  const country = getCountry(request);
   const locale = preferredLocale ?? (country && countryLocales[country]) ?? defaultLocale;
 
   return redirectTo(request, `/${locale}${pathname === "/" ? "" : pathname}`);
+}
+
+/**
+ * The visitor's country. Vercel adds `x-vercel-ip-country` to every request;
+ * locally there is no such header, so `next dev` can fake one with DEV_COUNTRY
+ * (e.g. DEV_COUNTRY=RU in .env.local). Ignored in production builds.
+ */
+function getCountry(request: NextRequest): string | undefined {
+  const header = request.headers.get("x-vercel-ip-country");
+  const devOverride = process.env.NODE_ENV === "development" ? process.env.DEV_COUNTRY : undefined;
+  return (header ?? devOverride)?.toUpperCase();
 }
 
 function redirectTo(request: NextRequest, pathname: string) {

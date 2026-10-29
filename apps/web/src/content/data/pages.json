@@ -27,7 +27,7 @@
     },
     "description": {
       "en": "A Russian consulting firm offering end-to-end support for international businesses entering or expanding in the Russian Federation.",
-      "ru": "Российская консалтинговая компания, обеспечивающая комплексную поддержку иностранного бизнеса при выходе на рынок РФ и развитии в России."
+      "ru": "Российская консалтинговая компания, обеспечивающая комплексную поддержку иностранного бизнеса при выходе на российский рынок и развитии бизнеса в стране."
     },
     "image": {
       "key": "hero",
@@ -43,7 +43,7 @@
       },
       "title": {
         "en": "Built on real-world experience in Russia",
-        "ru": "Основано на реальном опыте работы в России"
+        "ru": "В основе — реальный опыт работы в России"
       },
       "paragraphs": [
         {
