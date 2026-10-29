@@ -45,22 +45,22 @@ export default async function ContactPage() {
             <h2 className="text-2xl font-semibold text-primary">{labels.methodsTitle}</h2>
             <ul className="space-y-4">
               <ContactMethod icon={<PhoneIcon className="size-6" />} label={labels.phone}>
-                <a href={contact.phoneHref} className="hover:underline">
+                <a href={contact.phoneHref} className="link-underline">
                   {contact.phone}
                 </a>
               </ContactMethod>
               <ContactMethod icon={<MailIcon className="size-6" />} label={labels.email}>
-                <a href={`mailto:${contact.email}`} className="hover:underline">
+                <a href={`mailto:${contact.email}`} className="link-underline">
                   {contact.email}
                 </a>
               </ContactMethod>
               <ContactMethod icon={<WhatsAppIcon className="size-6" />} label={labels.whatsapp}>
-                <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <a href={contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="link-underline">
                   {contact.phone}
                 </a>
               </ContactMethod>
               <ContactMethod icon={<TelegramIcon className="size-6" />} label={labels.telegram}>
-                <a href={contact.telegramUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <a href={contact.telegramUrl} target="_blank" rel="noopener noreferrer" className="link-underline">
                   @{contact.telegramUrl.split("/").pop()}
                 </a>
               </ContactMethod>

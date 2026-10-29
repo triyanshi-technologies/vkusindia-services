@@ -18,9 +18,9 @@ export function Breadcrumbs({ label, items }: { label: string; items: Crumb[] })
             {item.href ? (
               <Link
                 href={item.href}
-                className="inline-flex min-h-6 items-center underline-offset-4 hover:text-white hover:underline"
+                className="inline-flex min-h-6 items-center transition-colors hover:text-white"
               >
-                {item.label}
+                <span className="link-underline">{item.label}</span>
               </Link>
             ) : (
               <span aria-current="page" className="font-semibold text-white">

@@ -26,7 +26,7 @@ export function Approach({ eyebrow, title, description, image, items, tone = "ca
             title={title}
             description={description}
           />
-          <div className="relative mt-10 aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
+          <div className="relative mt-10 aspect-[4/3] overflow-clip rounded-3xl shadow-xl">
             <div className="scroll-zoom absolute inset-0">
               <Image
                 src={images[image.key]}
@@ -44,7 +44,7 @@ export function Approach({ eyebrow, title, description, image, items, tone = "ca
           {items.map((item) => (
             <li
               key={item.letter}
-              className="reveal relative overflow-hidden rounded-3xl border border-border bg-page p-8 sm:p-10 lg:min-h-72"
+              className="reveal relative overflow-clip rounded-3xl border border-border bg-page p-8 sm:p-10 lg:min-h-72"
             >
               <span
                 aria-hidden="true"

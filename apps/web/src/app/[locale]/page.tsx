@@ -48,7 +48,6 @@ export default async function HomePage() {
       <StatsBand
         eyebrow={stats.eyebrow}
         title={stats.title}
-        description={stats.description}
         items={stats.items}
         note={stats.note}
       />

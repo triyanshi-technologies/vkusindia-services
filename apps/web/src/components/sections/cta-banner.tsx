@@ -19,7 +19,7 @@ export function CtaBanner({ title, description, button, secondary, image }: CtaB
   return (
     <section aria-labelledby="cta-title" className="bg-page py-16 sm:py-24">
       <Container>
-        <div className="reveal-fade relative isolate overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center shadow-2xl shadow-primary/20 sm:px-12 sm:py-24">
+        <div className="reveal-fade relative isolate overflow-clip rounded-3xl bg-primary px-6 py-16 text-center shadow-2xl shadow-primary/20 sm:px-12 sm:py-24">
           <div className="scroll-zoom absolute inset-0 -z-20">
             <Image src={images[image]} alt="" fill placeholder="blur" sizes="(min-width: 1280px) 1216px, 100vw" className="object-cover" />
           </div>

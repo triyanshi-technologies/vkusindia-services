@@ -40,7 +40,7 @@ export function ServiceTiles({ locale, services, layout = "bento" }: ServiceTile
           >
             <Link
               href={localePath(locale, `/services/${service.slug}`)}
-              className="group relative isolate flex min-h-80 w-full flex-col justify-end overflow-hidden rounded-2xl p-6 text-white shadow-sm transition-shadow hover:shadow-xl sm:p-8 lg:min-h-96"
+              className="group relative isolate flex min-h-80 w-full flex-col justify-end overflow-clip rounded-2xl p-6 text-white shadow-sm transition-shadow hover:shadow-xl sm:p-8 lg:min-h-96"
             >
               <Image
                 src={images[service.image.key]}

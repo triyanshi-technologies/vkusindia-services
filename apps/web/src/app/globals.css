@@ -61,6 +61,12 @@
  * they only move while the visitor scrolls. Everything is opt-in behind
  * `prefers-reduced-motion: no-preference`, and browsers without
  * `animation-timeline` simply show the final, static state.
+ *
+ * IMPORTANT: never put `overflow-hidden` on an ancestor of these elements.
+ * `overflow: hidden` creates a scroll container, and `view()` then tracks that
+ * (non-scrolling) box instead of the page, so the effect freezes. Use
+ * `overflow-clip`: it clips the same way (rounded corners included) without
+ * creating a scroll container.
  */
 @layer components {
   /* Decorative outlined text (always aria-hidden). */
@@ -72,6 +78,24 @@
   .bg-dots {
     background-image: radial-gradient(rgb(255 255 255 / 0.12) 1px, transparent 1px);
     background-size: 22px 22px;
+  }
+
+  /*
+   * Underline that draws from left to right on hover or keyboard focus.
+   * Put it on the link itself, or on the text <span> inside a link
+   * (e.g. next to an icon): hovering the link animates the span.
+   */
+  .link-underline {
+    padding-bottom: 0.125rem;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.3s ease;
+  }
+  .link-underline:is(:hover, :focus-visible),
+  :is(a, button):is(:hover, :focus-visible) .link-underline {
+    background-size: 100% 1px;
   }
 
   /* Scroll progress bar: hidden unless it can follow the scroll. */

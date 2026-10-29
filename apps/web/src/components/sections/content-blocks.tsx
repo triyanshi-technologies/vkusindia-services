@@ -28,7 +28,7 @@ export function ContentBlocks({ blocks, labels }: ContentBlocksProps) {
         key={headingId}
         tone={isDark ? "primary" : surface}
         aria-labelledby={headingId}
-        className={cn("relative isolate overflow-hidden", isDark && "bg-dots")}
+        className={cn("relative isolate overflow-clip", isDark && "bg-dots")}
       >
         <SectionHeading
           id={headingId}

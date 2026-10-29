@@ -18,7 +18,7 @@ export function FeatureGrid({ items }: { items: Feature[] }) {
   return (
     <ul
       className={cn(
-        "reveal-fade grid gap-px overflow-hidden rounded-3xl bg-primary/10 shadow-sm ring-1 ring-primary/10 sm:grid-cols-2",
+        "reveal-fade grid gap-px overflow-clip rounded-3xl bg-primary/10 shadow-sm ring-1 ring-primary/10 sm:grid-cols-2",
         fourAcross ? "lg:grid-cols-4" : "lg:grid-cols-3",
       )}
     >

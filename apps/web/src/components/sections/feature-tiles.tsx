@@ -14,7 +14,7 @@ type FeatureTilesProps = {
 /** Dark band: the heading pinned on the left, numbered glass tiles on the right. */
 export function FeatureTiles({ id, eyebrow, title, description, items }: FeatureTilesProps) {
   return (
-    <section aria-labelledby={id} className="relative isolate overflow-hidden bg-primary py-20 text-white sm:py-28">
+    <section aria-labelledby={id} className="relative isolate overflow-clip bg-primary py-20 text-white sm:py-28">
       <div aria-hidden="true" className="bg-dots absolute inset-0 -z-10" />
       <div
         aria-hidden="true"

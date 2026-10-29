@@ -59,13 +59,8 @@
       "en": "A market with room to grow",
       "ru": "Рынок с потенциалом роста"
     },
-    "description": {
-      "en": "Strong domestic demand and new trade routes are opening opportunities for international suppliers and investors.",
-      "ru": "Высокий внутренний спрос и новые торговые маршруты открывают возможности для иностранных поставщиков и инвесторов."
-    },
     "items": [
       {
-        "icon": "chart",
         "value": {
           "en": "$30.8B",
           "ru": "$30,8 млрд"
@@ -76,7 +71,6 @@
         }
       },
       {
-        "icon": "trending-up",
         "value": {
           "en": "+26%",
           "ru": "+26%"
@@ -87,18 +81,16 @@
         }
       },
       {
-        "icon": "truck",
         "value": {
           "en": "45%",
           "ru": "45%"
         },
         "label": {
           "en": "Of imports are machinery, equipment and vehicles",
-          "ru": "Импорта приходится на машины, оборудование и транспорт"
+          "ru": "Импорта — машины, оборудование и транспорт"
         }
       },
       {
-        "icon": "package",
         "value": {
           "en": "153.8M t",
           "ru": "153,8 млн т"

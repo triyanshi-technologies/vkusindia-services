@@ -51,7 +51,6 @@ export type ServiceEntry = {
 };
 
 export type StatItem = {
-  icon: ContentIconName;
   value: Localized;
   label: Localized;
 };
@@ -78,7 +77,6 @@ export type HomeContent = {
   stats: {
     eyebrow: Localized;
     title: Localized;
-    description: Localized;
     items: StatItem[];
     note: Localized;
   };

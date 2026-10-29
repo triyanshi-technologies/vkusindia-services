@@ -17,7 +17,7 @@ async function getCurrentYear() {
 }
 
 const linkClass =
-  "inline-flex min-h-11 items-center text-white/80 underline-offset-4 transition-colors hover:text-white hover:underline sm:min-h-9";
+  "inline-flex min-h-11 items-center text-white/80 transition-colors hover:text-white sm:min-h-9";
 
 export async function SiteFooter() {
   const [locale, dict, year] = await Promise.all([getLocale(), getDictionary(), getCurrentYear()]);
@@ -38,7 +38,7 @@ export async function SiteFooter() {
             {services.map((service) => (
               <li key={service.slug}>
                 <Link href={localePath(locale, `/services/${service.slug}`)} className={linkClass}>
-                  {service.title}
+                  <span className="link-underline">{service.title}</span>
                 </Link>
               </li>
             ))}
@@ -48,7 +48,7 @@ export async function SiteFooter() {
             {companyNav.map((item) => (
               <li key={item.key}>
                 <Link href={localePath(locale, item.path)} className={linkClass}>
-                  {dict.nav.items[item.key]}
+                  <span className="link-underline">{dict.nav.items[item.key]}</span>
                 </Link>
               </li>
             ))}
@@ -60,14 +60,14 @@ export async function SiteFooter() {
             <a href={contact.phoneHref} className={`${linkClass} gap-2`}>
               <PhoneIcon className="size-4 shrink-0" />
               <span className="sr-only">{dict.footer.phone}: </span>
-              {contact.phone}
+              <span className="link-underline">{contact.phone}</span>
             </a>
           </li>
           <li>
             <a href={`mailto:${contact.email}`} className={`${linkClass} gap-2`}>
               <MailIcon className="size-4 shrink-0" />
               <span className="sr-only">{dict.footer.email}: </span>
-              {contact.email}
+              <span className="link-underline">{contact.email}</span>
             </a>
           </li>
         </FooterColumn>

@@ -12,7 +12,7 @@ export function ScrollMarquee({ words }: ScrollMarqueeProps) {
   const row = [...words, ...words, ...words, ...words];
 
   return (
-    <div aria-hidden="true" className="overflow-hidden bg-page py-14 select-none sm:py-20">
+    <div aria-hidden="true" className="overflow-clip bg-page py-14 select-none sm:py-20">
       <div className="slide-start flex w-max gap-10 text-4xl font-bold tracking-tight whitespace-nowrap text-primary sm:text-6xl">
         {row.map((word, index) => (
           <span key={index} className="flex items-center gap-10">

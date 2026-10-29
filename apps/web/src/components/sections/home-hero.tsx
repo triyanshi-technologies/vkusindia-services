@@ -36,7 +36,7 @@ export function HomeHero({
   image,
 }: HomeHeroProps) {
   return (
-    <div className="relative isolate overflow-hidden bg-primary text-white">
+    <div className="relative isolate overflow-clip bg-primary text-white">
       <div className="parallax absolute inset-0 -z-20">
         <Image
           src={images[image.key]}

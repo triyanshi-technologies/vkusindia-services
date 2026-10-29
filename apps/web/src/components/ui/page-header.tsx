@@ -15,7 +15,7 @@ type PageHeaderProps = {
 /** The title band at the top of every inner page. Holds the page's only <h1>. */
 export function PageHeader({ title, description, image, breadcrumbs }: PageHeaderProps) {
   return (
-    <div className="relative isolate overflow-hidden bg-primary text-white">
+    <div className="relative isolate overflow-clip bg-primary text-white">
       {image && (
         <>
           <div className="parallax absolute inset-0 -z-20">
