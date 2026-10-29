@@ -51,6 +51,7 @@ export type ServiceEntry = {
 };
 
 export type StatItem = {
+  icon: ContentIconName;
   value: Localized;
   label: Localized;
 };
@@ -85,7 +86,6 @@ export type HomeContent = {
     eyebrow: Localized;
     title: Localized;
     description: Localized;
-    viewAll: Localized;
   };
   approach: {
     eyebrow: Localized;
@@ -115,7 +115,6 @@ type PageIntro = {
 
 export type PagesContent = {
   cta: CallToAction;
-  services: PageIntro & { image: ImageRef };
   about: PageIntro & {
     image: ImageRef;
     story: { eyebrow: Localized; title: Localized; paragraphs: Localized[]; image: ImageRef };

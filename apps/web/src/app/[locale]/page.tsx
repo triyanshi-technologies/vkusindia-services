@@ -8,8 +8,8 @@ import { ScrollMarquee } from "@/components/sections/scroll-marquee";
 import { ServiceTiles } from "@/components/sections/service-tiles";
 import { StatsBand } from "@/components/sections/stats-band";
 import { Timeline } from "@/components/sections/timeline";
-import { ButtonLink } from "@/components/ui/button-link";
 import { Section, SectionHeading } from "@/components/ui/section";
+import { servicesAnchor } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 import { getHomeContent, getPageContent } from "@/content/pages";
 import { getServices } from "@/content/services";
@@ -29,7 +29,7 @@ export default async function HomePage() {
   const cta = getPageContent(locale, "cta");
   const services = getServices(locale);
   const contactHref = localePath(locale, "/contact");
-  const servicesHref = localePath(locale, "/services");
+  const servicesHref = `${localePath(locale)}${servicesAnchor}`;
 
   return (
     <>
@@ -53,20 +53,13 @@ export default async function HomePage() {
         note={stats.note}
       />
 
-      <Section aria-labelledby="home-services">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading
-            id="home-services"
-            eyebrow={servicesCopy.eyebrow}
-            title={servicesCopy.title}
-            description={servicesCopy.description}
-          />
-          <div className="shrink-0">
-            <ButtonLink href={servicesHref} variant="outline">
-              {servicesCopy.viewAll}
-            </ButtonLink>
-          </div>
-        </div>
+      <Section id={servicesAnchor.slice(1)} aria-labelledby="home-services">
+        <SectionHeading
+          id="home-services"
+          eyebrow={servicesCopy.eyebrow}
+          title={servicesCopy.title}
+          description={servicesCopy.description}
+        />
         <div className="mt-12">
           <ServiceTiles locale={locale} services={services} />
         </div>

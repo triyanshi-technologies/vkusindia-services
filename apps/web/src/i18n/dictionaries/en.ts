@@ -20,6 +20,7 @@ const en = {
     label: "Main",
     openMenu: "Open menu",
     closeMenu: "Close menu",
+    menuHint: "Not sure which service fits your project?",
     cta: "Get a consultation",
     items: {
       home: "Home",
@@ -52,7 +53,6 @@ const en = {
   servicePage: {
     overview: "Overview",
     otherServices: "Other services",
-    allServices: "All services",
     asideTitle: "Discuss your project",
     asideText: "The first consultation is free. Reach us the way that suits you.",
   },

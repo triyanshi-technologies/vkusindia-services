@@ -8,6 +8,7 @@ import { ServiceTiles } from "@/components/sections/service-tiles";
 import { ButtonLink } from "@/components/ui/button-link";
 import { PageHeader } from "@/components/ui/page-header";
 import { Eyebrow, Section, SectionHeading } from "@/components/ui/section";
+import { servicesAnchor } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 import { images } from "@/content/images";
 import { getPageContent } from "@/content/pages";
@@ -60,7 +61,7 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
           label: dict.common.breadcrumbs,
           items: [
             { label: dict.nav.items.home, href: localePath(locale) },
-            { label: dict.nav.items.services, href: localePath(locale, "/services") },
+            { label: dict.nav.items.services, href: `${localePath(locale)}${servicesAnchor}` },
             { label: service.title },
           ],
         }}
@@ -130,14 +131,7 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
       <ContentBlocks blocks={service.blocks} labels={dict.blocks} />
 
       <Section aria-labelledby="other-services">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <SectionHeading id="other-services" title={dict.servicePage.otherServices} />
-          <div className="shrink-0">
-            <ButtonLink href={localePath(locale, "/services")} variant="outline">
-              {dict.servicePage.allServices}
-            </ButtonLink>
-          </div>
-        </div>
+        <SectionHeading id="other-services" title={dict.servicePage.otherServices} />
         <div className="mt-12">
           <ServiceTiles locale={locale} services={otherServices} layout="row" />
         </div>

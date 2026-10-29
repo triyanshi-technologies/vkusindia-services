@@ -8,35 +8,39 @@
       "en": "Tell us about your project. We will outline the exact steps and timeline tailored to your needs.",
       "ru": "Расскажите о вашем проекте, и мы предложим конкретные шаги и сроки под ваши задачи."
     },
-    "button": { "en": "Get a free consultation", "ru": "Бесплатная консультация" },
-    "image": {
-      "key": "cta",
-      "alt": { "en": "", "ru": "" }
-    }
-  },
-  "services": {
-    "title": { "en": "Our services", "ru": "Наши услуги" },
-    "description": {
-      "en": "End-to-end support for doing business in Russia. Choose a single service or combine several. We tailor our support to your goals.",
-      "ru": "Комплексная поддержка бизнеса в России. Выберите отдельную услугу или комбинацию — мы подстроимся под ваши цели."
+    "button": {
+      "en": "Get a free consultation",
+      "ru": "Бесплатная консультация"
     },
     "image": {
-      "key": "port",
-      "alt": { "en": "", "ru": "" }
+      "key": "cta",
+      "alt": {
+        "en": "",
+        "ru": ""
+      }
     }
   },
   "about": {
-    "title": { "en": "About us", "ru": "О нас" },
+    "title": {
+      "en": "About us",
+      "ru": "О нас"
+    },
     "description": {
       "en": "A Russian consulting firm offering end-to-end support for international businesses entering or expanding in the Russian Federation.",
       "ru": "Российская консалтинговая компания, обеспечивающая комплексную поддержку иностранного бизнеса при выходе на рынок РФ и развитии в России."
     },
     "image": {
       "key": "hero",
-      "alt": { "en": "", "ru": "" }
+      "alt": {
+        "en": "",
+        "ru": ""
+      }
     },
     "story": {
-      "eyebrow": { "en": "Who we are", "ru": "Кто мы" },
+      "eyebrow": {
+        "en": "Who we are",
+        "ru": "Кто мы"
+      },
       "title": {
         "en": "Built on real-world experience in Russia",
         "ru": "Основано на реальном опыте работы в России"
@@ -60,8 +64,14 @@
       }
     },
     "philosophy": {
-      "eyebrow": { "en": "Our philosophy", "ru": "Наша философия" },
-      "title": { "en": "We measure our success by yours", "ru": "Ваш успех — мерило нашего" },
+      "eyebrow": {
+        "en": "Our philosophy",
+        "ru": "Наша философия"
+      },
+      "title": {
+        "en": "We measure our success by yours",
+        "ru": "Ваш успех — мерило нашего"
+      },
       "text": {
         "en": "We combine the analytical rigour of Western consulting with the practical, on-the-ground agility of a local Russian enterprise. Our entrepreneur-led approach means we are pragmatic, solution-oriented and deeply invested in your tangible success.",
         "ru": "Мы сочетаем аналитическую глубину западного консалтинга с практической гибкостью российской компании. Предпринимательский подход делает нас прагматичными, ориентированными на решения и заинтересованными в вашем реальном успехе."
@@ -69,7 +79,10 @@
     }
   },
   "contact": {
-    "title": { "en": "Contact us", "ru": "Свяжитесь с нами" },
+    "title": {
+      "en": "Contact us",
+      "ru": "Свяжитесь с нами"
+    },
     "description": {
       "en": "Tell us about your project and we will propose the next steps. The first consultation is free.",
       "ru": "Расскажите о вашем проекте, и мы предложим следующие шаги. Первая консультация бесплатна."
@@ -84,7 +97,10 @@
     }
   },
   "privacy": {
-    "title": { "en": "Privacy policy", "ru": "Политика конфиденциальности" },
+    "title": {
+      "en": "Privacy policy",
+      "ru": "Политика конфиденциальности"
+    },
     "description": {
       "en": "How we collect, use and protect your personal data.",
       "ru": "Как мы собираем, используем и защищаем ваши персональные данные."

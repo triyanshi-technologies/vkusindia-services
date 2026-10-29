@@ -2,21 +2,44 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { mainNav } from "@/config/navigation";
+import { getServices } from "@/content/services";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { Logo } from "./logo";
 import { MobileNav } from "./mobile-nav";
+import { NavDropdown } from "./nav-dropdown";
 import { NavLink } from "./nav-link";
+import type { HeaderNavItem } from "./nav-types";
 
 export async function SiteHeader() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
-
-  const items = mainNav.map((item) => ({
-    href: localePath(locale, item.path),
-    label: dict.nav.items[item.key],
-    exact: item.path === "/",
-  }));
   const cta = { href: localePath(locale, "/contact"), label: dict.nav.cta };
+
+  const items: HeaderNavItem[] = mainNav.map((item) => {
+    const label = dict.nav.items[item.key];
+
+    if ("menu" in item) {
+      return {
+        type: "menu",
+        label,
+        activePrefix: localePath(locale, "/services/"),
+        entries: getServices(locale).map((service) => ({
+          href: localePath(locale, `/services/${service.slug}`),
+          label: service.title,
+          description: service.summary,
+          icon: service.icon,
+        })),
+        footer: { text: dict.nav.menuHint, href: cta.href, label: cta.label },
+      };
+    }
+
+    return {
+      type: "link",
+      href: localePath(locale, item.path),
+      label,
+      exact: item.path === "/",
+    };
+  });
 
   return (
     <header className="header-elevate sticky top-0 z-40 border-b border-border bg-card/95 backdrop-blur">
@@ -27,10 +50,19 @@ export async function SiteHeader() {
         <nav aria-label={dict.nav.label} className="hidden md:block">
           <ul className="flex items-center gap-1">
             {items.map((item) => (
-              <li key={item.href}>
-                <NavLink href={item.href} exact={item.exact}>
-                  {item.label}
-                </NavLink>
+              <li key={item.label}>
+                {item.type === "link" ? (
+                  <NavLink href={item.href} exact={item.exact}>
+                    {item.label}
+                  </NavLink>
+                ) : (
+                  <NavDropdown
+                    label={item.label}
+                    activePrefix={item.activePrefix}
+                    entries={item.entries}
+                    footer={item.footer}
+                  />
+                )}
               </li>
             ))}
           </ul>

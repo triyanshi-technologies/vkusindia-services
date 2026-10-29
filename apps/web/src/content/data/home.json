@@ -65,6 +65,7 @@
     },
     "items": [
       {
+        "icon": "chart",
         "value": {
           "en": "$30.8B",
           "ru": "$30,8 млрд"
@@ -75,6 +76,7 @@
         }
       },
       {
+        "icon": "trending-up",
         "value": {
           "en": "+26%",
           "ru": "+26%"
@@ -85,6 +87,7 @@
         }
       },
       {
+        "icon": "truck",
         "value": {
           "en": "45%",
           "ru": "45%"
@@ -95,6 +98,7 @@
         }
       },
       {
+        "icon": "package",
         "value": {
           "en": "153.8M t",
           "ru": "153,8 млн т"
@@ -122,10 +126,6 @@
     "description": {
       "en": "Practical, on-the-ground support across the entire business lifecycle. Pick one service or combine several.",
       "ru": "Практическая поддержка на месте на всех этапах развития бизнеса. Выберите одну услугу или комбинацию."
-    },
-    "viewAll": {
-      "en": "View all services",
-      "ru": "Все услуги"
     }
   },
   "approach": {

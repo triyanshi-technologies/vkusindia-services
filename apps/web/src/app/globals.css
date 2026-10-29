@@ -88,6 +88,13 @@
   }
 }
 
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+}
+
 @keyframes reveal-left {
   from {
     opacity: 0;
@@ -163,6 +170,11 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  /* Dropdown panels: replays each time the panel is shown (hidden -> visible). */
+  .animate-pop {
+    animation: pop 0.18s ease-out both;
+  }
+
   /* One-time entrance for above-the-fold content. Use `--delay` to stagger. */
   .animate-enter {
     animation: reveal-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
