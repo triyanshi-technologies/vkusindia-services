@@ -1,20 +1,21 @@
 import { TelegramIcon, WhatsAppIcon } from "@/components/icons";
-import { siteConfig } from "@/config/site";
-import { getDictionary } from "@/i18n/get-dictionary";
+import { getSiteSettings } from "@/content/site-settings";
+import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 
 const buttonClass =
   "inline-flex size-12 items-center justify-center rounded-full bg-secondary text-white shadow-lg transition-colors hover:bg-secondary-hover";
 
 /** WhatsApp and Telegram shortcuts pinned to the bottom corner on every page. */
 export async function FloatingChat() {
-  const dict = await getDictionary();
+  const locale = await getLocale();
+  const [dict, contact] = await Promise.all([getDictionary(), getSiteSettings(locale)]);
 
   return (
     <aside aria-label={dict.chat.label} className="fixed right-4 bottom-4 z-30 sm:right-6 sm:bottom-6">
       <ul className="flex flex-col gap-3">
         <li>
           <a
-            href={siteConfig.contact.whatsappUrl}
+            href={contact.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClass}
@@ -25,7 +26,7 @@ export async function FloatingChat() {
         </li>
         <li>
           <a
-            href={siteConfig.contact.telegramUrl}
+            href={contact.telegramUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClass}

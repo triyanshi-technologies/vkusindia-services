@@ -9,12 +9,5 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   name: "vkusindia",
   url: resolveSiteUrl(),
-  // DEMO contacts: replace with the client's real details before launch (will move to Sanity).
-  contact: {
-    phone: "+7 (900) 000-00-00",
-    phoneHref: "tel:+79000000000",
-    email: "hello@example.com",
-    whatsappUrl: "https://wa.me/79000000000",
-    telegramUrl: "https://t.me/vkusindia_demo",
-  },
+  // Contact details are edited in Sanity: see src/content/site-settings.ts.
 } as const;

@@ -33,7 +33,7 @@ export function ContentBlocks({ blocks, labels }: ContentBlocksProps) {
         <SectionHeading
           id={headingId}
           title={block.title}
-          description={block.intro}
+          description={block.intro ?? undefined}
           inverse={isDark}
           align={block.type === "steps" || block.type === "comparison" ? "center" : "start"}
         />

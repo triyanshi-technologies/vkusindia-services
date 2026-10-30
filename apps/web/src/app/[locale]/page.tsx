@@ -10,9 +10,9 @@ import { StatsBand } from "@/components/sections/stats-band";
 import { Timeline } from "@/components/sections/timeline";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { servicesAnchor } from "@/config/navigation";
-import { siteConfig } from "@/config/site";
 import { getHomeContent, getPageContent } from "@/content/pages";
 import { getServices } from "@/content/services";
+import { getSiteSettings } from "@/content/site-settings";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { getAlternates } from "@/lib/metadata";
@@ -27,7 +27,7 @@ export default async function HomePage() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   const { hero, stats, services: servicesCopy, approach, why, process } = getHomeContent(locale);
   const cta = getPageContent(locale, "cta");
-  const services = getServices(locale);
+  const [services, contact] = await Promise.all([getServices(locale), getSiteSettings(locale)]);
   const contactHref = localePath(locale, "/contact");
   const servicesHref = `${localePath(locale)}${servicesAnchor}`;
 
@@ -72,6 +72,7 @@ export default async function HomePage() {
         description={approach.description}
         image={approach.image}
         items={approach.items}
+        stageLabel={dict.approach.stage}
       />
 
       <FeatureTiles
@@ -100,7 +101,7 @@ export default async function HomePage() {
         description={cta.description}
         button={{ href: contactHref, label: cta.button }}
         secondary={{
-          href: siteConfig.contact.whatsappUrl,
+          href: contact.whatsappUrl,
           label: dict.contactPage.whatsapp,
           icon: <WhatsAppIcon className="size-5" />,
         }}

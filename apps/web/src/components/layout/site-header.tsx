@@ -13,6 +13,7 @@ import type { HeaderNavItem } from "./nav-types";
 
 export async function SiteHeader() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
+  const services = await getServices(locale);
   const cta = { href: localePath(locale, "/contact"), label: dict.nav.cta };
 
   const items: HeaderNavItem[] = mainNav.map((item) => {
@@ -23,7 +24,7 @@ export async function SiteHeader() {
         type: "menu",
         label,
         activePrefix: localePath(locale, "/services/"),
-        entries: getServices(locale).map((service) => ({
+        entries: services.map((service) => ({
           href: localePath(locale, `/services/${service.slug}`),
           label: service.title,
           description: service.summary,

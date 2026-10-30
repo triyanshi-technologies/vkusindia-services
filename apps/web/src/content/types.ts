@@ -25,7 +25,7 @@ export type StepItem = {
 
 type BlockBase = {
   title: Localized;
-  intro?: Localized;
+  intro?: Localized | null;
 };
 
 /** Page-builder blocks used on service pages. */
@@ -39,10 +39,18 @@ export type ContentBlock =
       rows: { feature: Localized; values: [Localized, Localized] }[];
     });
 
+/** An image from Sanity: CDN URL, blur placeholder, focal point and alt text. */
+export type CmsImageRef = {
+  url: string;
+  lqip: string | null;
+  hotspot: { x: number; y: number } | null;
+  alt: Localized;
+};
+
 export type ServiceEntry = {
   slug: string;
   icon: ContentIconName;
-  image: ImageRef;
+  image: CmsImageRef;
   title: Localized;
   summary: Localized;
   tagline: Localized;
@@ -90,8 +98,7 @@ export type HomeContent = {
     title: Localized;
     description: Localized;
     image: ImageRef;
-    /** Stage letter: A/M/Z in English, А/М/Я in Russian ("от А до Я"). */
-    items: { letter: Localized; title: Localized; description: Localized }[];
+    items: FeatureItem[];
   };
   process: {
     eyebrow: Localized;
@@ -107,6 +114,13 @@ export type HomeContent = {
   };
 };
 
+export type ApproachStage = FeatureItem & {
+  points: Localized[];
+  outcome: Localized;
+  /** Slugs of the services that deliver this stage. */
+  services: string[];
+};
+
 type PageIntro = {
   title: Localized;
   description: Localized;
@@ -118,10 +132,21 @@ export type PagesContent = {
     image: ImageRef;
     story: { eyebrow: Localized; title: Localized; paragraphs: Localized[]; image: ImageRef };
     philosophy: { eyebrow: Localized; title: Localized; text: Localized };
+    /** The detailed version of the home page's approach section. */
+    approach: {
+      eyebrow: Localized;
+      title: Localized;
+      description: Localized;
+      stages: ApproachStage[];
+    };
+    /** The detailed version of the home page's "why us" section. */
+    why: {
+      eyebrow: Localized;
+      title: Localized;
+      description: Localized;
+      items: FeatureItem[];
+    };
   };
-  contact: PageIntro & {
-    hours: Localized;
-    responseTime: Localized;
-  };
+  contact: PageIntro;
   privacy: PageIntro;
 };

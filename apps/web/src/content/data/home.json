@@ -130,8 +130,8 @@
       "ru": "Один партнёр — от А до Я"
     },
     "description": {
-      "en": "The Russian market is a land of immense opportunity, and of complex regulation, cultural nuance and logistical hurdles. We guide you through the entire business lifecycle, through action rather than presentations.",
-      "ru": "Российский рынок открывает огромные возможности, но в нём сложное регулирование, культурные особенности и логистические барьеры. Мы сопровождаем вас на протяжении всего жизненного цикла бизнеса — делом, а не презентациями."
+      "en": "We guide you through the entire business lifecycle in Russia, through action rather than presentations.",
+      "ru": "Мы сопровождаем ваш бизнес в России на всех этапах — делом, а не презентациями."
     },
     "image": {
       "key": "handshake",
@@ -142,10 +142,7 @@
     },
     "items": [
       {
-        "letter": {
-          "en": "A",
-          "ru": "А"
-        },
+        "icon": "target",
         "title": {
           "en": "Strategy & entry",
           "ru": "Стратегия и выход на рынок"
@@ -156,10 +153,7 @@
         }
       },
       {
-        "letter": {
-          "en": "M",
-          "ru": "М"
-        },
+        "icon": "clipboard-check",
         "title": {
           "en": "Operations",
           "ru": "Операционная деятельность"
@@ -170,10 +164,7 @@
         }
       },
       {
-        "letter": {
-          "en": "Z",
-          "ru": "Я"
-        },
+        "icon": "trending-up",
         "title": {
           "en": "Growth & exit",
           "ru": "Рост и выход из бизнеса"

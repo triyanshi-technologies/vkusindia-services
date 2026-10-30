@@ -76,6 +76,216 @@
         "en": "We combine the analytical rigour of Western consulting with the practical, on-the-ground agility of a local Russian enterprise. Our entrepreneur-led approach means we are pragmatic, solution-oriented and deeply invested in your tangible success.",
         "ru": "Мы сочетаем аналитическую глубину западного консалтинга с практической гибкостью российской компании. Предпринимательский подход делает нас прагматичными, ориентированными на решения и заинтересованными в вашем реальном успехе."
       }
+    },
+    "approach": {
+      "eyebrow": {
+        "en": "The A–Z advantage",
+        "ru": "Всё от А до Я"
+      },
+      "title": {
+        "en": "Every stage of your business in Russia, covered",
+        "ru": "Каждый этап вашего бизнеса в России — под контролем"
+      },
+      "description": {
+        "en": "The Russian market offers immense opportunity, along with complex regulation, cultural nuance and logistical hurdles. We give you a complete operational guide, delivered through action rather than presentations. Work with us on one stage or on the whole journey.",
+        "ru": "Российский рынок открывает огромные возможности, но в нём сложное регулирование, культурные особенности и логистические барьеры. Мы предлагаем полное практическое сопровождение — делом, а не презентациями. Работайте с нами на одном этапе или на всём пути."
+      },
+      "stages": [
+        {
+          "icon": "target",
+          "title": {
+            "en": "Strategy & entry",
+            "ru": "Стратегия и выход на рынок"
+          },
+          "description": {
+            "en": "Before you invest, we make sure the market, the structure and the partners are right.",
+            "ru": "До того как вы вложите средства, мы убеждаемся, что рынок, структура и партнёры выбраны верно."
+          },
+          "points": [
+            {
+              "en": "Product market analysis and demand research",
+              "ru": "Анализ рынка продукта и исследование спроса"
+            },
+            {
+              "en": "Choice of legal form and company registration",
+              "ru": "Выбор организационно-правовой формы и регистрация компании"
+            },
+            {
+              "en": "Due diligence on Russian and foreign partners",
+              "ru": "Проверка российских и иностранных контрагентов"
+            },
+            {
+              "en": "Business plan and financial model for investors and banks",
+              "ru": "Бизнес-план и финансовая модель для инвесторов и банков"
+            }
+          ],
+          "outcome": {
+            "en": "A verified plan and a registered company, ready to operate.",
+            "ru": "Проверенный план и зарегистрированная компания, готовая к работе."
+          },
+          "services": [
+            "consultation",
+            "business-plan",
+            "open-a-business"
+          ]
+        },
+        {
+          "icon": "clipboard-check",
+          "title": {
+            "en": "Operations",
+            "ru": "Операционная деятельность"
+          },
+          "description": {
+            "en": "Once you are in, we take on the day-to-day work that slows foreign companies down.",
+            "ru": "После запуска мы берём на себя повседневные задачи, которые обычно тормозят иностранные компании."
+          },
+          "points": [
+            {
+              "en": "Tax optimisation and accounting support",
+              "ru": "Налоговая оптимизация и бухгалтерское сопровождение"
+            },
+            {
+              "en": "Customs compliance for every shipment",
+              "ru": "Соблюдение таможенных требований для каждой поставки"
+            },
+            {
+              "en": "Local recruitment and HR management",
+              "ru": "Подбор местного персонала и кадровое управление"
+            },
+            {
+              "en": "Warehousing, storage and logistics",
+              "ru": "Складское хранение и логистика"
+            }
+          ],
+          "outcome": {
+            "en": "A business that runs smoothly and stays compliant.",
+            "ru": "Бизнес, который работает стабильно и соответствует требованиям закона."
+          },
+          "services": [
+            "warehouse",
+            "shipment-control"
+          ]
+        },
+        {
+          "icon": "trending-up",
+          "title": {
+            "en": "Growth & exit",
+            "ru": "Рост и выход из бизнеса"
+          },
+          "description": {
+            "en": "When the business works, we help it grow and protect what you have built.",
+            "ru": "Когда бизнес заработал, мы помогаем ему расти и защищаем то, что вы создали."
+          },
+          "points": [
+            {
+              "en": "Scaling supply chains and finding new suppliers",
+              "ru": "Масштабирование цепочек поставок и поиск новых поставщиков"
+            },
+            {
+              "en": "Trade exhibitions and business promotion",
+              "ru": "Участие в выставках и продвижение бизнеса"
+            },
+            {
+              "en": "Risk management in a changing market",
+              "ru": "Управление рисками в меняющихся рыночных условиях"
+            },
+            {
+              "en": "Profitable repatriation of earnings",
+              "ru": "Выгодная репатриация прибыли"
+            }
+          ],
+          "outcome": {
+            "en": "Sustainable growth, and profits you can bring home.",
+            "ru": "Устойчивый рост и прибыль, которую можно вывести на родину."
+          },
+          "services": [
+            "exhibitions",
+            "consultation"
+          ]
+        }
+      ]
+    },
+    "why": {
+      "eyebrow": {
+        "en": "Why vkusindia",
+        "ru": "Почему vkusindia"
+      },
+      "title": {
+        "en": "What working with us looks like",
+        "ru": "Как выглядит работа с нами"
+      },
+      "description": {
+        "en": "Six reasons clients choose us for the Russian market, and what each one means for your project in practice.",
+        "ru": "Шесть причин, по которым клиенты выбирают нас для работы на российском рынке, и что каждая из них значит для вашего проекта на практике."
+      },
+      "items": [
+        {
+          "icon": "briefcase",
+          "title": {
+            "en": "Entrepreneur-led",
+            "ru": "Опыт предпринимателя"
+          },
+          "description": {
+            "en": "Our founder has launched and run businesses in Russia. We are operators, not theorists: every recommendation comes from experience of what works on the ground.",
+            "ru": "Наш основатель сам запускал и вёл бизнес в России. Мы практики, а не теоретики: каждая рекомендация основана на опыте того, что действительно работает."
+          }
+        },
+        {
+          "icon": "shield",
+          "title": {
+            "en": "Transparent & honest",
+            "ru": "Прозрачность и честность"
+          },
+          "description": {
+            "en": "We tell you what you need to hear, not just what you want to hear, including when a plan carries more risk than it seems.",
+            "ru": "Мы говорим то, что вам нужно услышать, а не только то, что хочется услышать, в том числе когда план рискованнее, чем кажется."
+          }
+        },
+        {
+          "icon": "globe",
+          "title": {
+            "en": "Bilingual team",
+            "ru": "Двуязычная команда"
+          },
+          "description": {
+            "en": "We work in English and Russian, so nothing gets lost between you and Russian authorities, partners and suppliers.",
+            "ru": "Мы работаем на английском и русском языках, поэтому ничего не теряется при общении с российскими ведомствами, партнёрами и поставщиками."
+          }
+        },
+        {
+          "icon": "building",
+          "title": {
+            "en": "One team, end to end",
+            "ru": "Одна команда на всех этапах"
+          },
+          "description": {
+            "en": "Registration, warehousing, shipments and exhibitions are handled by one team, so you don't have to coordinate several contractors.",
+            "ru": "Регистрацией, складом, поставками и выставками занимается одна команда, и вам не нужно координировать нескольких подрядчиков."
+          }
+        },
+        {
+          "icon": "laptop",
+          "title": {
+            "en": "On-site or online",
+            "ru": "В офисе или онлайн"
+          },
+          "description": {
+            "en": "We work at your office for in-person collaboration, or online from anywhere in the world, saving you time and travel costs.",
+            "ru": "Мы работаем в вашем офисе вместе с командой или онлайн из любой точки мира, экономя ваше время и расходы на поездки."
+          }
+        },
+        {
+          "icon": "trending-up",
+          "title": {
+            "en": "Long-term partnership",
+            "ru": "Долгосрочное партнёрство"
+          },
+          "description": {
+            "en": "We measure our success by your sustained growth, not a single project fee, and adjust the plan as markets change.",
+            "ru": "Наш успех — это ваш устойчивый рост, а не гонорар за один проект. Мы корректируем план по мере изменения рынка."
+          }
+        }
+      ]
     }
   },
   "contact": {
@@ -86,14 +296,6 @@
     "description": {
       "en": "Tell us about your project and we will propose the next steps. The first consultation is free.",
       "ru": "Расскажите о вашем проекте, и мы предложим следующие шаги. Первая консультация бесплатна."
-    },
-    "hours": {
-      "en": "Monday to Friday, 9:00–18:00 (Moscow time)",
-      "ru": "Понедельник — пятница, 9:00–18:00 (МСК)"
-    },
-    "responseTime": {
-      "en": "We usually reply within one business day.",
-      "ru": "Обычно мы отвечаем в течение одного рабочего дня."
     }
   },
   "privacy": {

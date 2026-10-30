@@ -48,6 +48,12 @@ const ru = {
     step: "Шаг",
     versus: "или",
   },
+  approach: {
+    stage: "Этап",
+    includes: "Что мы делаем",
+    outcome: "Результат",
+    relatedServices: "Связанные услуги",
+  },
   servicePage: {
     overview: "Обзор",
     otherServices: "Другие услуги",

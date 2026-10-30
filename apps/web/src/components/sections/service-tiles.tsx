@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { ArrowRightIcon, ContentIcon } from "@/components/icons";
-import { images } from "@/content/images";
+import { imageProps } from "@/content/images";
 import type { Service } from "@/content/services";
 import type { Locale } from "@/i18n/config";
 import { localePath } from "@/i18n/paths";
@@ -43,10 +43,9 @@ export function ServiceTiles({ locale, services, layout = "bento" }: ServiceTile
               className="group relative isolate flex min-h-80 w-full flex-col justify-end overflow-clip rounded-2xl p-6 text-white shadow-sm transition-shadow hover:shadow-xl sm:p-8 lg:min-h-96"
             >
               <Image
-                src={images[service.image.key]}
+                {...imageProps(service.image)}
                 alt=""
                 fill
-                placeholder="blur"
                 sizes={isWide ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"}
                 className="-z-20 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Approach } from "@/components/sections/approach";
 import { CtaBanner } from "@/components/sections/cta-banner";
-import { FeatureTiles } from "@/components/sections/feature-tiles";
+import { ReasonList } from "@/components/sections/reason-list";
+import { StageJourney } from "@/components/sections/stage-journey";
 import { PageHeader } from "@/components/ui/page-header";
 import { Eyebrow, Section, SectionHeading } from "@/components/ui/section";
 import { images } from "@/content/images";
-import { getHomeContent, getPageContent } from "@/content/pages";
+import { getPageContent } from "@/content/pages";
+import { getServices } from "@/content/services";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { getAlternates } from "@/lib/metadata";
@@ -25,8 +26,18 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function AboutPage() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   const page = getPageContent(locale, "about");
-  const { approach, why } = getHomeContent(locale);
+  const { approach, why } = page;
   const cta = getPageContent(locale, "cta");
+
+  // Stages link to services by slug; ones not (or no longer) published in Sanity are left out.
+  const services = await getServices(locale);
+  const stages = approach.stages.map((stage) => ({
+    ...stage,
+    services: stage.services.flatMap((slug) => {
+      const service = services.find((entry) => entry.slug === slug);
+      return service ? [{ href: localePath(locale, `/services/${slug}`), label: service.title }] : [];
+    }),
+  }));
 
   return (
     <>
@@ -78,15 +89,15 @@ export default async function AboutPage() {
         </figure>
       </Section>
 
-      <Approach
+      <StageJourney
         eyebrow={approach.eyebrow}
         title={approach.title}
         description={approach.description}
-        image={approach.image}
-        items={approach.items}
+        stages={stages}
+        labels={dict.approach}
       />
 
-      <FeatureTiles
+      <ReasonList
         id="about-why"
         eyebrow={why.eyebrow}
         title={why.title}

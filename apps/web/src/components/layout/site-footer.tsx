@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/container";
 import { companyNav } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 import { getServices } from "@/content/services";
+import { getSiteSettings } from "@/content/site-settings";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { FooterAccordion } from "./footer-accordion";
@@ -21,8 +22,7 @@ const linkClass =
 
 export async function SiteFooter() {
   const [locale, dict, year] = await Promise.all([getLocale(), getDictionary(), getCurrentYear()]);
-  const services = getServices(locale);
-  const { contact } = siteConfig;
+  const [services, contact] = await Promise.all([getServices(locale), getSiteSettings(locale)]);
 
   return (
     <footer className="bg-primary text-white">

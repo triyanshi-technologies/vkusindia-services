@@ -9,24 +9,24 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { PageHeader } from "@/components/ui/page-header";
 import { Eyebrow, Section, SectionHeading } from "@/components/ui/section";
 import { servicesAnchor } from "@/config/navigation";
-import { siteConfig } from "@/config/site";
-import { images } from "@/content/images";
+import { imageProps } from "@/content/images";
 import { getPageContent } from "@/content/pages";
 import { getService, getServiceSlugs, getServices } from "@/content/services";
+import { getSiteSettings } from "@/content/site-settings";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { getAlternates } from "@/lib/metadata";
 
 // Slugs are shared across locales, so one list covers every [locale].
-export function generateStaticParams() {
-  return getServiceSlugs().map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  return (await getServiceSlugs()).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/[locale]/services/[slug]">): Promise<Metadata> {
   const [{ slug }, locale] = await Promise.all([params, getLocale()]);
-  const service = getService(locale, slug);
+  const service = await getService(locale, slug);
   if (!service) return {};
 
   return {
@@ -41,22 +41,23 @@ const contactLinkClass =
 
 export default async function ServicePage({ params }: PageProps<"/[locale]/services/[slug]">) {
   const [{ slug }, locale, dict] = await Promise.all([params, getLocale(), getDictionary()]);
-  const service = getService(locale, slug);
+  const [service, services, contact] = await Promise.all([
+    getService(locale, slug),
+    getServices(locale),
+    getSiteSettings(locale),
+  ]);
   if (!service) notFound();
 
   const cta = getPageContent(locale, "cta");
-  const otherServices = getServices(locale)
-    .filter((other) => other.slug !== slug)
-    .slice(0, 3);
+  const otherServices = services.filter((other) => other.slug !== slug).slice(0, 3);
   const contactHref = localePath(locale, "/contact");
-  const { contact } = siteConfig;
 
   return (
     <>
       <PageHeader
         title={service.title}
         description={service.tagline}
-        image={service.image.key}
+        image={service.image}
         breadcrumbs={{
           label: dict.common.breadcrumbs,
           items: [
@@ -84,10 +85,9 @@ export default async function ServicePage({ params }: PageProps<"/[locale]/servi
             </div>
             <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-2xl shadow-lg">
               <Image
-                src={images[service.image.key]}
+                {...imageProps(service.image)}
                 alt={service.image.alt}
                 fill
-                placeholder="blur"
                 sizes="(min-width: 1024px) 720px, 100vw"
                 className="object-cover"
               />

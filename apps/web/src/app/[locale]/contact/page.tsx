@@ -4,9 +4,9 @@ import { ContactForm } from "@/components/contact-form";
 import { ClockIcon, MailIcon, PhoneIcon, TelegramIcon, WhatsAppIcon } from "@/components/icons";
 import { PageHeader } from "@/components/ui/page-header";
 import { Section } from "@/components/ui/section";
-import { siteConfig } from "@/config/site";
 import { getPageContent } from "@/content/pages";
 import { getServices } from "@/content/services";
+import { getSiteSettings } from "@/content/site-settings";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { getAlternates } from "@/lib/metadata";
@@ -26,7 +26,7 @@ export default async function ContactPage() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   const page = getPageContent(locale, "contact");
   const labels = dict.contactPage;
-  const { contact } = siteConfig;
+  const [services, contact] = await Promise.all([getServices(locale), getSiteSettings(locale)]);
 
   return (
     <>
@@ -61,12 +61,12 @@ export default async function ContactPage() {
               </ContactMethod>
               <ContactMethod icon={<TelegramIcon className="size-6" />} label={labels.telegram}>
                 <a href={contact.telegramUrl} target="_blank" rel="noopener noreferrer" className="link-underline">
-                  @{contact.telegramUrl.split("/").pop()}
+                  @{contact.telegramHandle}
                 </a>
               </ContactMethod>
               <ContactMethod icon={<ClockIcon className="size-6" />} label={labels.hours}>
-                <span>{page.hours}</span>
-                <span className="mt-1 block text-sm font-normal text-muted">{page.responseTime}</span>
+                <span>{contact.hours}</span>
+                <span className="mt-1 block text-sm font-normal text-muted">{contact.responseTime}</span>
               </ContactMethod>
             </ul>
           </div>
@@ -76,7 +76,7 @@ export default async function ContactPage() {
             <div className="mt-8">
               <ContactForm
                 labels={labels.form}
-                services={getServices(locale).map(({ slug, title }) => ({ slug, title }))}
+                services={services.map(({ slug, title }) => ({ slug, title }))}
                 privacyHref={localePath(locale, "/privacy")}
                 email={contact.email}
               />

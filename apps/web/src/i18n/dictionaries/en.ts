@@ -50,6 +50,12 @@ const en = {
     step: "Step",
     versus: "vs",
   },
+  approach: {
+    stage: "Stage",
+    includes: "What we handle",
+    outcome: "The result",
+    relatedServices: "Related services",
+  },
   servicePage: {
     overview: "Overview",
     otherServices: "Other services",

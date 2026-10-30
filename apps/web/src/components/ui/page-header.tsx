@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { images, type ImageKey } from "@/content/images";
+import { imageProps, type ImageSource } from "@/content/images";
 import { Breadcrumbs, type Crumb } from "./breadcrumbs";
 import { Container } from "./container";
 
@@ -8,7 +8,7 @@ type PageHeaderProps = {
   title: string;
   description?: string;
   /** Decorative background photo behind a dark overlay. */
-  image?: ImageKey;
+  image?: ImageSource;
   breadcrumbs?: { label: string; items: Crumb[] };
 };
 
@@ -20,11 +20,10 @@ export function PageHeader({ title, description, image, breadcrumbs }: PageHeade
         <>
           <div className="parallax absolute inset-0 -z-20">
             <Image
-              src={images[image]}
+              {...imageProps(image)}
               alt=""
               fill
               preload
-              placeholder="blur"
               sizes="100vw"
               className="object-cover"
             />

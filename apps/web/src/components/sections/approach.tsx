@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ContentIcon } from "@/components/icons";
 import { Section, SectionHeading, type SectionTone } from "@/components/ui/section";
 import { images, type ImageKey } from "@/content/images";
 
@@ -7,15 +8,17 @@ type ApproachProps = {
   title: string;
   description: string;
   image: { key: ImageKey; alt: string };
-  items: { letter: string; title: string; description: string }[];
+  items: { icon: string; title: string; description: string }[];
+  /** "Stage" label shown above each title. */
+  stageLabel: string;
   tone?: SectionTone;
 };
 
 /**
- * The A–Z lifecycle. On desktop the heading and photo stay pinned while the
- * three stages scroll past them.
+ * The business lifecycle in brief. On desktop the heading and photo stay
+ * pinned while the stages scroll past them.
  */
-export function Approach({ eyebrow, title, description, image, items, tone = "card" }: ApproachProps) {
+export function Approach({ eyebrow, title, description, image, items, stageLabel, tone = "card" }: ApproachProps) {
   return (
     <Section tone={tone} aria-labelledby="approach-title">
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
@@ -41,27 +44,34 @@ export function Approach({ eyebrow, title, description, image, items, tone = "ca
         </div>
 
         <ol className="space-y-6 lg:pt-24">
-          {items.map((item) => (
-            <li
-              key={item.letter}
-              className="reveal relative overflow-clip rounded-3xl border border-border bg-page p-8 sm:p-10 lg:min-h-72"
-            >
-              <span
-                aria-hidden="true"
-                className="text-outline pointer-events-none absolute -top-4 right-4 text-[9rem] leading-none font-black opacity-60 sm:text-[11rem]"
+          {items.map((item, index) => {
+            const number = String(index + 1).padStart(2, "0");
+
+            return (
+              <li
+                key={item.title}
+                className="reveal relative overflow-clip rounded-3xl border border-border bg-page p-8 sm:p-10 lg:min-h-72"
               >
-                {item.letter}
-              </span>
-              <span
-                aria-hidden="true"
-                className="inline-flex size-14 items-center justify-center rounded-2xl bg-primary text-2xl font-bold text-white"
-              >
-                {item.letter}
-              </span>
-              <h3 className="relative mt-8 text-2xl font-semibold text-primary">{item.title}</h3>
-              <p className="relative mt-3 max-w-md text-lg text-muted">{item.description}</p>
-            </li>
-          ))}
+                <span
+                  aria-hidden="true"
+                  className="text-outline pointer-events-none absolute -top-4 right-4 text-[8rem] leading-none font-black opacity-60 sm:text-[10rem]"
+                >
+                  {number}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="relative inline-flex size-14 items-center justify-center rounded-2xl bg-primary text-white"
+                >
+                  <ContentIcon name={item.icon} className="size-7" />
+                </span>
+                <p className="relative mt-8 text-sm font-semibold text-secondary">
+                  {stageLabel} {number}
+                </p>
+                <h3 className="relative mt-1 text-2xl font-semibold text-primary">{item.title}</h3>
+                <p className="relative mt-3 max-w-md text-lg text-muted">{item.description}</p>
+              </li>
+            );
+          })}
         </ol>
       </div>
     </Section>
