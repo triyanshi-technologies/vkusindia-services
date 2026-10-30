@@ -26,9 +26,12 @@ Requirements: Node.js 22 or newer.
 
 ```bash
 npm install
+cp apps/web/.env.example apps/web/.env.local   # then fill in the Sanity project ID
 npm run dev          # website  -> http://localhost:3000
-npm run dev:studio   # studio   -> http://localhost:3333
 ```
+
+Content is edited in the hosted Sanity Studio. `npm run dev:studio` runs it locally
+(http://localhost:3333) when working on the Studio itself.
 
 ## Scripts (run from the root)
 

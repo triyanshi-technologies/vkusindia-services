@@ -27,6 +27,3 @@
 
 # Dotenv and similar local-only files
 *.local
-
-# Generated import file (scripts/build-seed.mjs)
-/seed
