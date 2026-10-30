@@ -4,7 +4,12 @@ import { SANITY_CACHE_TAG, sanityClient } from "@/sanity/client";
 import { siteSettingsQuery } from "@/sanity/queries";
 import { localize, type Localized } from "./localize";
 
+/** An uploaded logo file. `null` when the field is empty: the site then shows the name as text. */
+export type LogoImage = { url: string; width: number; height: number } | null;
+
 type SiteSettingsEntry = {
+  logo: LogoImage;
+  logoOnDark: LogoImage;
   phone: string;
   email: string;
   whatsappUrl: string;
@@ -22,7 +27,7 @@ async function fetchSiteSettings(): Promise<SiteSettingsEntry> {
   return settings;
 }
 
-/** Contact details from the Sanity "Site settings" document, in one language. */
+/** Logo and contact details from the Sanity "Site settings" document, in one language. */
 export async function getSiteSettings(locale: Locale) {
   const settings = localize(await fetchSiteSettings(), locale);
   return {

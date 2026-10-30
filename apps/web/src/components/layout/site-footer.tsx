@@ -22,13 +22,13 @@ const linkClass =
 
 export async function SiteFooter() {
   const [locale, dict, year] = await Promise.all([getLocale(), getDictionary(), getCurrentYear()]);
-  const [services, contact] = await Promise.all([getServices(locale), getSiteSettings(locale)]);
+  const [services, settings] = await Promise.all([getServices(locale), getSiteSettings(locale)]);
 
   return (
     <footer className="bg-primary text-white">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
         <div>
-          <Logo href={localePath(locale)} label={dict.common.homeLink} />
+          <Logo href={localePath(locale)} label={dict.common.homeLink} image={settings.logoOnDark} />
           <p className="mt-3 max-w-xs text-white/80">{dict.footer.tagline}</p>
         </div>
 
@@ -57,17 +57,17 @@ export async function SiteFooter() {
 
         <FooterColumn heading={dict.footer.contactHeading}>
           <li>
-            <a href={contact.phoneHref} className={`${linkClass} gap-2`}>
+            <a href={settings.phoneHref} className={`${linkClass} gap-2`}>
               <PhoneIcon className="size-4 shrink-0" />
               <span className="sr-only">{dict.footer.phone}: </span>
-              <span className="link-underline">{contact.phone}</span>
+              <span className="link-underline">{settings.phone}</span>
             </a>
           </li>
           <li>
-            <a href={`mailto:${contact.email}`} className={`${linkClass} gap-2`}>
+            <a href={`mailto:${settings.email}`} className={`${linkClass} gap-2`}>
               <MailIcon className="size-4 shrink-0" />
               <span className="sr-only">{dict.footer.email}: </span>
-              <span className="link-underline">{contact.email}</span>
+              <span className="link-underline">{settings.email}</span>
             </a>
           </li>
         </FooterColumn>

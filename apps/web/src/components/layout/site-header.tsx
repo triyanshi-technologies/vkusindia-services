@@ -3,6 +3,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
 import { mainNav } from "@/config/navigation";
 import { getServices } from "@/content/services";
+import { getSiteSettings } from "@/content/site-settings";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { localePath } from "@/i18n/paths";
 import { Logo } from "./logo";
@@ -13,7 +14,7 @@ import type { HeaderNavItem } from "./nav-types";
 
 export async function SiteHeader() {
   const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
-  const services = await getServices(locale);
+  const [services, settings] = await Promise.all([getServices(locale), getSiteSettings(locale)]);
   const cta = { href: localePath(locale, "/contact"), label: dict.nav.cta };
 
   const items: HeaderNavItem[] = mainNav.map((item) => {
@@ -46,7 +47,12 @@ export async function SiteHeader() {
     <header className="header-elevate sticky top-0 z-40 border-b border-border bg-card/95 backdrop-blur">
       <div aria-hidden="true" className="scroll-progress absolute inset-x-0 bottom-0 h-0.5 bg-secondary" />
       <Container className="flex h-16 items-center justify-between gap-4">
-        <Logo href={localePath(locale)} label={dict.common.homeLink} className="text-primary" />
+        <Logo
+          href={localePath(locale)}
+          label={dict.common.homeLink}
+          image={settings.logo}
+          className="text-primary"
+        />
 
         <nav aria-label={dict.nav.label} className="hidden md:block">
           <ul className="flex items-center gap-1">

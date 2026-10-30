@@ -43,7 +43,15 @@ const serviceProjection = /* groq */ `{
 
 export const servicesQuery = /* groq */ `*[_type == "service" && defined(slug.current)] | order(order asc) ${serviceProjection}`;
 
+const logoProjection = /* groq */ `asset->{
+  url,
+  "width": metadata.dimensions.width,
+  "height": metadata.dimensions.height
+}`;
+
 export const siteSettingsQuery = /* groq */ `*[_id == "siteSettings"][0]{
+  "logo": logo.${logoProjection},
+  "logoOnDark": logoOnDark.${logoProjection},
   phone,
   email,
   whatsappUrl,
