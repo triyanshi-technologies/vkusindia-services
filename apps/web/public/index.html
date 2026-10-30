@@ -1,0 +1,24 @@
+<!doctype html>
+<!--
+  GitHub Pages entry point ("/"). Static hosting has no proxy, so the language is
+  chosen here: the one saved by the language switcher (NEXT_LOCALE cookie), else English.
+  Links are relative, so this works under any base path (e.g. /vkusindia-services/).
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>vkusindia</title>
+    <script>
+      (function () {
+        var match = document.cookie.match(/(?:^|;\s*)NEXT_LOCALE=(en|ru)(?:;|$)/);
+        location.replace("./" + (match ? match[1] : "en") + "/" + location.hash);
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=./en/" /></noscript>
+  </head>
+  <body>
+    <p><a href="./en/">English</a> · <a href="./ru/" hreflang="ru">Русский</a></p>
+  </body>
+</html>

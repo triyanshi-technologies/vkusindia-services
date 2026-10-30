@@ -1,0 +1,71 @@
+# Builds the static website from the github-pages-demo branch and deploys it to GitHub Pages.
+#
+# Runs when:
+#   - code is pushed to github-pages-demo
+#   - content is published in Sanity (webhook -> "sanity-content-changed" repository_dispatch)
+#   - started by hand (Actions tab -> "GitHub Pages" -> "Run workflow")
+#
+# GitHub only runs repository_dispatch workflows from the default branch, so this file
+# must also exist on main. It always builds github-pages-demo, whichever branch it runs from.
+
+name: GitHub Pages
+
+on:
+  push:
+    branches: [github-pages-demo]
+  repository_dispatch:
+    types: [sanity-content-changed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Several Sanity publishes in a row: cancel the older run, deploy only the newest.
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: github-pages-demo
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static site
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ vars.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ vars.NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+
+      - name: Use the site's styled page for unknown URLs
+        run: cp apps/web/out/en/page-not-found/index.html apps/web/out/404.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

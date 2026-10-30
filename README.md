@@ -46,7 +46,12 @@ Content is edited in the hosted Sanity Studio. `npm run dev:studio` runs it loca
 
 ## Deployment
 
-| Branch             | Host         | Notes                                                        |
-| ------------------ | ------------ | ------------------------------------------------------------ |
-| `main`             | Vercel       | Production. Language detection by cookie and visitor country |
-| `gh-pages-preview` | GitHub Pages | Temporary static preview. Language detection in the browser  |
+| Branch              | Host         | Notes                                                        |
+| ------------------- | ------------ | ------------------------------------------------------------ |
+| `main`              | Vercel       | Production. Language detection by cookie and visitor country |
+| `github-pages-demo` | GitHub Pages | Static demo. Saved language (cookie) or English              |
+
+The GitHub Pages branch is a static export (`output: "export"`, no proxy, no Cache
+Components). `.github/workflows/github-pages.yml` builds and deploys it on every push to
+`github-pages-demo`, on every Sanity publish (webhook) and on demand. Sanity changes go live
+on Vercel within a few minutes without a deploy.
