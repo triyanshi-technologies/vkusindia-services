@@ -47,6 +47,6 @@ function redirectTo(request: NextRequest, pathname: string) {
 }
 
 export const config = {
-  // Skip Next.js internals and any path with a file extension (favicon.ico, robots.txt, images…).
-  matcher: ["/((?!_next|_vercel|.*\\..*).*)"],
+  // Skip API routes, Next.js internals and any path with a file extension (favicon.ico, robots.txt, images…).
+  matcher: ["/((?!api/|_next|_vercel|.*\\..*).*)"],
 };

@@ -78,7 +78,8 @@ export default async function ContactPage() {
                 labels={labels.form}
                 services={services.map(({ slug, title }) => ({ slug, title }))}
                 privacyHref={localePath(locale, "/privacy")}
-                email={contact.email}
+                locale={locale}
+                phone={{ display: contact.phone, href: contact.phoneHref }}
               />
             </div>
           </div>

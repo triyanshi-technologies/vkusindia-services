@@ -41,4 +41,11 @@ src/
 Sanity content is cached and refreshed every few minutes. The website needs
 `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` (see `.env.example`).
 
+## Contact form
+
+The form posts to `src/app/api/contact/route.ts`, which emails the request to the company
+inbox with Nodemailer over SMTP (`src/lib/forms`). Spam protection is a honeypot field: bots
+fill it in and get a fake success, so nothing is sent. Without the `SMTP_*` and `MAIL_TO`
+variables (see `.env.example`), submissions are only logged, so local work needs no mailbox.
+
 The structure grows as features are added. Keep this section up to date.

@@ -83,8 +83,12 @@ const en = {
       consentLink: "privacy policy",
       required: "required",
       submit: "Send request",
-      hint: "Submitting opens your email app with the request filled in.",
-      subject: "Website request",
+      sending: "Sending…",
+      success: "Thank you! We have received your request and will get back to you soon.",
+      errorInvalid: "Some details look incorrect. Please check the form and try again.",
+      errorSend: "Your request could not be sent. Please try again or call us:",
+      // Label of the hidden anti-spam field. People never see it; bots fill it in.
+      honeypot: "Leave this field empty",
     },
   },
   notFound: {
