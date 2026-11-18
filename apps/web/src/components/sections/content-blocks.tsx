@@ -5,6 +5,7 @@ import { cn } from "@/lib/cn";
 import { Checklist } from "./checklist";
 import { ComparisonTable } from "./comparison-table";
 import { FeatureGrid } from "./feature-grid";
+import { IndustryGrid } from "./industry-grid";
 import { Timeline } from "./timeline";
 
 type ContentBlocksProps = {
@@ -61,6 +62,8 @@ function BlockBody({
       return <Timeline items={block.items} stepLabel={labels.step} surface={surface} />;
     case "checklist":
       return <Checklist items={block.items} />;
+    case "industries":
+      return <IndustryGrid items={block.items} surface={surface} />;
     case "comparison":
       return <ComparisonTable columns={block.columns} rows={block.rows} versusLabel={labels.versus} />;
   }

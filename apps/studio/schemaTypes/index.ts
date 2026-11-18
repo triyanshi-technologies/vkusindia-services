@@ -1,6 +1,12 @@
 import {service} from './documents/service'
 import {siteSettings} from './documents/site-settings'
-import {checklistBlock, comparisonBlock, featuresBlock, stepsBlock} from './objects/blocks'
+import {
+  checklistBlock,
+  comparisonBlock,
+  featuresBlock,
+  industriesBlock,
+  stepsBlock,
+} from './objects/blocks'
 import {localeString, localeText} from './objects/locale'
 
 export const schemaTypes = [
@@ -10,6 +16,7 @@ export const schemaTypes = [
   stepsBlock,
   checklistBlock,
   comparisonBlock,
+  industriesBlock,
   localeString,
   localeText,
 ]

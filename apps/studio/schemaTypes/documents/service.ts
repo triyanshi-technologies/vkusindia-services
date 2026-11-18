@@ -77,6 +77,7 @@ export const service = defineType({
         defineArrayMember({type: 'stepsBlock'}),
         defineArrayMember({type: 'checklistBlock'}),
         defineArrayMember({type: 'comparisonBlock'}),
+        defineArrayMember({type: 'industriesBlock'}),
       ],
     }),
   ],

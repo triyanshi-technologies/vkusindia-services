@@ -33,6 +33,10 @@ const serviceProjection = /* groq */ `{
       "type": "checklist",
       "items": items[]${localized}
     },
+    _type == "industriesBlock" => {
+      "type": "industries",
+      "items": items[]{ icon, "name": name${localized} }
+    },
     _type == "comparisonBlock" => {
       "type": "comparison",
       "columns": [left${localized}, right${localized}],

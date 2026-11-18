@@ -2,7 +2,7 @@ import {defineArrayMember, defineField, defineType} from 'sanity'
 import {iconField} from './icon'
 
 /**
- * The four section types a service page can be built from. Each one renders
+ * The section types a service page can be built from. Each one renders
  * with a fixed design on the website, so editors choose the order and content only.
  */
 
@@ -94,6 +94,34 @@ export const checklistBlock = defineType({
     }),
   ],
   preview: blockPreview('Checklist'),
+})
+
+export const industriesBlock = defineType({
+  name: 'industriesBlock',
+  title: 'Industries',
+  type: 'object',
+  fields: [
+    ...blockBaseFields,
+    defineField({
+      name: 'items',
+      title: 'Industries',
+      description: 'Icon and name only, shown as a grid of tiles.',
+      type: 'array',
+      validation: (rule) => rule.required().min(1),
+      of: [
+        defineArrayMember({
+          name: 'industry',
+          type: 'object',
+          fields: [
+            iconField(),
+            defineField({name: 'name', type: 'localeString', validation: (rule) => rule.required()}),
+          ],
+          preview: {select: {title: 'name.en', subtitle: 'icon'}},
+        }),
+      ],
+    }),
+  ],
+  preview: blockPreview('Industries'),
 })
 
 export const comparisonBlock = defineType({
