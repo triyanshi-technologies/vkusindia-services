@@ -9,6 +9,24 @@ type Feature = {
 };
 
 /**
+ * Column span for one cell, so the last row never leaves an empty gap.
+ * Desktop uses six columns (three cells of two): a last row of two cells splits
+ * the width in half, a single last cell spans it. On tablets (two columns) an odd
+ * last cell spans both.
+ */
+function cellSpan(index: number, count: number, fourAcross: boolean): string {
+  const isLast = index === count - 1;
+  const tablet = isLast && count % 2 === 1 ? "sm:col-span-2" : "";
+  if (fourAcross) return tablet;
+
+  const leftover = count % 3;
+  const inLastRow = index >= count - leftover;
+  if (inLastRow && leftover === 1) return cn(tablet, "lg:col-span-6");
+  if (inLastRow && leftover === 2) return cn(tablet, "lg:col-span-3");
+  return cn(tablet, "lg:col-span-2");
+}
+
+/**
  * Features as one panel divided by hairlines (instead of separate cards).
  * Each cell gets an accent bar on hover. 4 or 8 items sit four across, others three.
  */
@@ -19,13 +37,16 @@ export function FeatureGrid({ items }: { items: Feature[] }) {
     <ul
       className={cn(
         "reveal-fade grid gap-px overflow-clip rounded-3xl bg-primary/10 shadow-sm ring-1 ring-primary/10 sm:grid-cols-2",
-        fourAcross ? "lg:grid-cols-4" : "lg:grid-cols-3",
+        fourAcross ? "lg:grid-cols-4" : "lg:grid-cols-6",
       )}
     >
       {items.map((item, index) => (
         <li
           key={item.title}
-          className="group relative bg-card p-7 transition-colors duration-300 hover:bg-page sm:p-8"
+          className={cn(
+            "group relative bg-card p-7 transition-colors duration-300 hover:bg-page sm:p-8",
+            cellSpan(index, items.length, fourAcross),
+          )}
         >
           <span
             aria-hidden="true"
