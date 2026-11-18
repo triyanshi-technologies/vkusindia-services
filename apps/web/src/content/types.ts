@@ -33,6 +33,7 @@ export type ContentBlock =
   | (BlockBase & { type: "features"; items: FeatureItem[] })
   | (BlockBase & { type: "steps"; items: StepItem[] })
   | (BlockBase & { type: "checklist"; items: Localized[] })
+  | (BlockBase & { type: "industries"; items: { icon: ContentIconName; name: Localized }[] })
   | (BlockBase & {
       type: "comparison";
       columns: [Localized, Localized];

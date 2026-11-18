@@ -12,11 +12,43 @@ type ServiceTilesProps = {
   locale: Locale;
   services: Service[];
   /**
-   * "bento": six tiles where the first and last are wide (4 columns on desktop).
+   * "bento": rows of three on a 4-column grid, see `bentoSpan`.
    * "row": equal tiles, three across.
    */
   layout?: "bento" | "row";
 };
+
+type BentoSpan = "normal" | "wide" | "half" | "full";
+
+const bentoSpanClasses: Record<BentoSpan, string> = {
+  normal: "",
+  wide: "sm:col-span-2",
+  half: "lg:col-span-2",
+  full: "sm:col-span-2 lg:col-span-4",
+};
+
+// Rendered tile width per layout, so each screen downloads a fitting photo size.
+const tileSizes: Record<BentoSpan, string> = {
+  normal: "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw",
+  wide: "(min-width: 1024px) 50vw, 100vw",
+  half: "(min-width: 1024px) 50vw, (min-width: 640px) 50vw, 100vw",
+  full: "100vw",
+};
+
+/**
+ * Bento layout for any number of tiles. Desktop rows hold three tiles, one of them
+ * double width, which alternates between the start and the end of the row. A last
+ * row of two tiles splits the width in half; a single last tile spans the full row.
+ * On tablets (2 columns) wide tiles take a whole row, so the rows still close evenly.
+ */
+function bentoSpan(index: number, count: number): BentoSpan {
+  const row = Math.floor(index / 3);
+  const tilesInRow = Math.min(3, count - row * 3);
+  if (tilesInRow === 1) return "full";
+  if (tilesInRow === 2) return "half";
+  const wideAt = row % 2 === 0 ? 0 : 2;
+  return index % 3 === wideAt ? "wide" : "normal";
+}
 
 /** Photo tiles with the text on a dark gradient. The whole tile is one link. */
 export function ServiceTiles({ locale, services, layout = "bento" }: ServiceTilesProps) {
@@ -30,12 +62,14 @@ export function ServiceTiles({ locale, services, layout = "bento" }: ServiceTile
       )}
     >
       {services.map((service, index) => {
-        const isWide = isBento && (index === 0 || index === services.length - 1);
+        const span = isBento ? bentoSpan(index, services.length) : "normal";
+        // Tiles at least half the desktop width get the full summary and larger images.
+        const isWide = span !== "normal";
 
         return (
           <li
             key={service.slug}
-            className={cn("reveal flex", isWide && "sm:col-span-2")}
+            className={cn("reveal flex", bentoSpanClasses[span])}
             style={{ "--i": index % 3 } as CSSProperties}
           >
             <Link
@@ -46,7 +80,7 @@ export function ServiceTiles({ locale, services, layout = "bento" }: ServiceTile
                 {...imageProps(service.image)}
                 alt=""
                 fill
-                sizes={isWide ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"}
+                sizes={tileSizes[span]}
                 className="-z-20 object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div

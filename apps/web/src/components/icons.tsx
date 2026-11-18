@@ -270,8 +270,55 @@ function MessageIcon(props: IconProps) {
   );
 }
 
+/* Industry icons */
+
+function BoltIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+    </StrokeIcon>
+  );
+}
+
+function MountainIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+    </StrokeIcon>
+  );
+}
+
+function SproutIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10" />
+      <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z" />
+      <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z" />
+    </StrokeIcon>
+  );
+}
+
+function FlaskIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2" />
+      <path d="M8.5 2h7M7 16h10" />
+    </StrokeIcon>
+  );
+}
+
+function FactoryIcon(props: IconProps) {
+  return (
+    <StrokeIcon {...props}>
+      <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z" />
+      <path d="M17 18h1M12 18h1M7 18h1" />
+    </StrokeIcon>
+  );
+}
+
 export const contentIcons = {
   bank: BankIcon,
+  bolt: BoltIcon,
   briefcase: BriefcaseIcon,
   building: BuildingIcon,
   calendar: CalendarIcon,
@@ -279,13 +326,17 @@ export const contentIcons = {
   check: CheckIcon,
   "clipboard-check": ClipboardCheckIcon,
   clock: ClockIcon,
+  factory: FactoryIcon,
   "file-text": FileTextIcon,
+  flask: FlaskIcon,
   globe: GlobeIcon,
   laptop: LaptopIcon,
   megaphone: MegaphoneIcon,
   message: MessageIcon,
+  mountain: MountainIcon,
   package: PackageIcon,
   search: SearchIcon,
+  sprout: SproutIcon,
   shield: ShieldIcon,
   target: TargetIcon,
   "trending-up": TrendingUpIcon,

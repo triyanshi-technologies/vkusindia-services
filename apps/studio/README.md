@@ -12,7 +12,7 @@ npx sanity deploy # publish schema or config changes to the hosted Studio
 
 - **Site settings**: phone, email, WhatsApp and Telegram links, office hours (one document).
 - **Services**: title, URL, menu order, icon, photo and texts, plus page sections built from
-  four types (features grid, steps timeline, checklist, comparison table). Every text has
+  five types (features grid, steps timeline, checklist, comparison table, industries). Every text has
   English and Russian side by side.
 
 ## Folder structure

@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/*
- * Design tokens. Use these through Tailwind utilities
- * (bg-page, text-primary, border-input, ...), never raw hex values.
- */
 @theme {
   /* brand */
   --color-primary: #112d4e; /* headings, navbar, footer, important sections */
@@ -76,7 +72,10 @@
   }
 
   .bg-dots {
-    background-image: radial-gradient(rgb(255 255 255 / 0.12) 1px, transparent 1px);
+    background-image: radial-gradient(
+      rgb(255 255 255 / 0.12) 1px,
+      transparent 1px
+    );
     background-size: 22px 22px;
   }
 
@@ -213,7 +212,8 @@
     .reveal-fade {
       animation: reveal-up linear both;
       animation-timeline: view();
-      animation-range: entry calc(var(--i, 0) * 6%) entry calc(45% + var(--i, 0) * 6%);
+      animation-range: entry calc(var(--i, 0) * 6%) entry
+        calc(45% + var(--i, 0) * 6%);
     }
     .reveal-left {
       animation-name: reveal-left;
